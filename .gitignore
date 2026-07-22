@@ -1,0 +1,4 @@
+assets/*.png
+.env
+Thumbs.db
+desktop.ini
