@@ -19,6 +19,15 @@
     v.addEventListener("pause", () => frame.classList.remove("playing"));
   });
 
+  /* contact email: assembled at runtime so the raw address isn't sitting in page source (works regardless of motion prefs) */
+  const emailParts = ["actpra", "ise", "@gm", "ail.co", "m"];
+  const contactEmail = emailParts.join("");
+  const contactSubject = encodeURIComponent("LP制作の相談");
+  const contactLink = document.querySelector("[data-contact-link]");
+  if (contactLink) contactLink.href = `mailto:${contactEmail}?subject=${contactSubject}`;
+  const contactAddress = document.querySelector("[data-contact-address]");
+  if (contactAddress) contactAddress.textContent = contactEmail;
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   if (!("IntersectionObserver" in window)) return;
 

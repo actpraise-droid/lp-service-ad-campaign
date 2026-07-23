@@ -1122,6 +1122,20 @@ html:not(.js) .scan {
   color: var(--accent);
 }
 
+.showcase-guide-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.showcase-guide-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---------- design gallery ---------- */
 .design-gallery {
   display: grid;
@@ -1844,6 +1858,15 @@ html:not(.js) .scan {
   font-size: 14.5px;
 }
 
+.faq-grid article.wide {
+  grid-column: span 4;
+  min-height: auto;
+}
+
+.faq-grid article.wide p {
+  max-width: 640px;
+}
+
 /* ---------- contact ---------- */
 .contact-section {
   position: relative;
@@ -2009,8 +2032,26 @@ html.js .contact-section .lit .mark {
 /* ---------- footer ---------- */
 .site-footer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   padding: 20px clamp(22px, 5vw, 72px);
   border-top: 1px solid var(--line);
+}
+
+.footer-legal-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-legal-link:hover {
+  color: var(--accent);
 }
 
 .site-footer p {
@@ -2051,7 +2092,8 @@ html.js .contact-section .lit .mark {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .showcase-card.wide {
+  .showcase-card.wide,
+  .faq-grid article.wide {
     grid-column: span 2;
   }
 
@@ -2134,7 +2176,8 @@ html.js .contact-section .lit .mark {
   }
 
   .showcase-card.tall,
-  .showcase-card.wide {
+  .showcase-card.wide,
+  .faq-grid article.wide {
     grid-column: auto;
     grid-row: auto;
   }
@@ -2250,5 +2293,387 @@ html.js .contact-section .lit .mark {
 
   .ticker {
     animation: none;
+  }
+}
+
+/* ============================================================
+   legal page (特定商取引法に基づく表記)
+   ============================================================ */
+
+.legal-body {
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(14, 14, 16, 0.05) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(90deg, rgba(14, 14, 16, 0.05) 0 1px, transparent 1px 64px);
+  color: var(--ink-p);
+}
+
+.legal-body::after {
+  display: none;
+}
+
+.legal-header {
+  background: rgba(237, 237, 232, 0.94);
+  border-bottom: 1px solid var(--line-p);
+}
+
+.legal-header .brand {
+  color: var(--ink-p);
+}
+
+.legal-header .brand-jp {
+  color: var(--muted-p);
+}
+
+.legal-header nav a {
+  color: var(--muted-p);
+}
+
+.legal-header nav a:hover {
+  color: var(--ink-p);
+}
+
+.legal-header nav a::after {
+  background: var(--ink-p);
+}
+
+.legal-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(120px, 14vw, 160px) clamp(22px, 6vw, 40px) clamp(80px, 10vw, 120px);
+}
+
+.legal-page .eyebrow {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-p);
+}
+
+.legal-page h1 {
+  margin: 0 0 24px;
+  font-family: var(--disp);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.3;
+}
+
+.legal-lead {
+  margin: 0 0 48px;
+  max-width: 60ch;
+  color: var(--muted-p);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.legal-table {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--line-p);
+  border: 1px solid var(--line-p);
+}
+
+.legal-table > div {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.32fr) 1fr;
+  gap: 20px;
+  padding: 20px 22px;
+  background: var(--paper-card);
+}
+
+.legal-table dt {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted-p);
+}
+
+.legal-table dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.legal-table a {
+  color: var(--ink-p);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .legal-table > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+/* ============================================================
+   guide articles (業種別LPガイド)
+   ============================================================ */
+
+.guide-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(110px, 13vw, 150px) clamp(22px, 6vw, 40px) clamp(90px, 11vw, 130px);
+}
+
+.guide-eyebrow {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-p);
+}
+
+.guide-article h1 {
+  margin: 0 0 20px;
+  font-family: var(--disp);
+  font-size: clamp(28px, 4.2vw, 42px);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.guide-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 32px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted-p);
+}
+
+.guide-byline .dot {
+  opacity: 0.5;
+}
+
+.guide-lead {
+  margin: 0 0 48px;
+  max-width: 62ch;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--ink-p);
+}
+
+.guide-section {
+  margin: 0 0 52px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line-p);
+}
+
+.guide-section:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.guide-section h2 {
+  margin: 0 0 14px;
+  font-family: var(--disp);
+  font-size: clamp(20px, 2.6vw, 25px);
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.guide-answer {
+  margin: 0 0 20px;
+  padding: 16px 20px;
+  max-width: 60ch;
+  background: var(--paper-card);
+  border-left: 3px solid var(--ink-p);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.guide-section p {
+  max-width: 68ch;
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: var(--muted-p);
+}
+
+.guide-section p + p {
+  margin-top: 16px;
+}
+
+.guide-section ul,
+.guide-section ol {
+  max-width: 68ch;
+  padding-left: 1.4em;
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--muted-p);
+}
+
+.guide-section li + li {
+  margin-top: 8px;
+}
+
+.guide-section strong {
+  color: var(--ink-p);
+}
+
+.guide-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid var(--line-p);
+}
+
+.guide-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.guide-table caption {
+  padding: 12px 16px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--muted-p);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line-p);
+}
+
+.guide-table th,
+.guide-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-p);
+  vertical-align: top;
+}
+
+.guide-table thead th {
+  background: var(--paper-card);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted-p);
+}
+
+.guide-table tbody {
+  background: var(--paper-card);
+}
+
+.guide-table tbody tr:last-child th,
+.guide-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.guide-sample {
+  margin: 24px 0;
+  border: 1px solid var(--line-p);
+  background: var(--paper-card);
+}
+
+.guide-sample img {
+  display: block;
+  width: 100%;
+}
+
+.guide-sample figcaption {
+  padding: 12px 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--muted-p);
+  border-top: 1px solid var(--line-p);
+}
+
+.guide-faq {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--line-p);
+  border: 1px solid var(--line-p);
+}
+
+.guide-faq > div {
+  padding: 18px 20px;
+  background: var(--paper-card);
+}
+
+.guide-faq dt {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.guide-faq dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted-p);
+}
+
+.guide-cta {
+  margin: 48px 0 0;
+  padding: 28px 26px;
+  background: var(--ink-p);
+  color: var(--ink);
+}
+
+.guide-cta p {
+  margin: 0 0 16px;
+  max-width: 60ch;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--cap);
+}
+
+.guide-cta .button {
+  display: inline-flex;
+}
+
+.guide-related {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-p);
+}
+
+.guide-related h2 {
+  margin: 0 0 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-p);
+}
+
+.guide-related ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-related a {
+  display: inline-flex;
+  padding: 8px 16px;
+  border: 1px solid var(--line-p);
+  color: var(--ink-p);
+  font-size: 13.5px;
+}
+
+.guide-related a:hover {
+  border-color: var(--ink-p);
+}
+
+@media (max-width: 640px) {
+  .guide-section {
+    margin: 0 0 40px;
+    padding-top: 32px;
   }
 }

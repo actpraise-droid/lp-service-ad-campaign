@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>特定商取引法に基づく表記 | 導線デベロッパー</title>
+    <meta name="description" content="株式会社MG ActPraiseが運営する問い合わせ導線LP制作サービス「導線デベロッパー」の、特定商取引法に基づく表記です。">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#edede8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="legal-body">
+    <header class="site-header legal-header">
+      <a class="brand" href="index.html#top">DOSEN-DEVELOPER<span class="brand-jp">導線デベロッパー</span></a>
+      <nav aria-label="ページ内ナビゲーション">
+        <a href="index.html">トップに戻る</a>
+      </nav>
+    </header>
+
+    <main class="legal-main">
+      <section class="legal-page">
+        <p class="eyebrow">Legal</p>
+        <h1>特定商取引法に基づく表記</h1>
+        <p class="legal-lead">
+          本ページは、株式会社MG ActPraiseが運営する「導線デベロッパー」(問い合わせ導線LP制作サービス)の、特定商取引法第11条に基づく表記です。
+        </p>
+
+        <dl class="legal-table">
+          <div>
+            <dt>販売事業者</dt>
+            <dd>株式会社MG ActPraise</dd>
+          </div>
+          <div>
+            <dt>代表者</dt>
+            <dd>代表取締役 小松 昌</dd>
+          </div>
+          <div>
+            <dt>所在地</dt>
+            <dd>〒248-0033<br>神奈川県鎌倉市腰越3-5-29</dd>
+          </div>
+          <div>
+            <dt>電話番号</dt>
+            <dd>ご請求いただいた場合、遅滞なく開示いたします。</dd>
+          </div>
+          <div>
+            <dt>メールアドレス</dt>
+            <dd><span data-contact-address>お問い合わせフォームよりご連絡ください</span></dd>
+          </div>
+          <div>
+            <dt>サービス内容</dt>
+            <dd>問い合わせ導線LP制作、AEO・導線診断、改善運用支援ほか</dd>
+          </div>
+          <div>
+            <dt>販売価格</dt>
+            <dd><a href="index.html#price">料金ページ</a>に記載の金額(すべて税別)</dd>
+          </div>
+          <div>
+            <dt>商品代金以外に必要な料金</dt>
+            <dd>消費税、お振込み手数料はお客様のご負担となります。</dd>
+          </div>
+          <div>
+            <dt>お支払い方法</dt>
+            <dd>銀行振込</dd>
+          </div>
+          <div>
+            <dt>お支払い時期</dt>
+            <dd>着手金として発注時に50%、残金は納品検収後7日以内にお支払いいただきます。</dd>
+          </div>
+          <div>
+            <dt>商品の引渡し時期</dt>
+            <dd>正式発注・素材提出・着手金の入金確認後、10営業日(標準プランの場合)。</dd>
+          </div>
+          <div>
+            <dt>返品・キャンセルについて</dt>
+            <dd>サービスの性質上、納品物の返品はお受けできません。キャンセルの取り扱いは進行状況により異なるため、契約時に個別にご案内します。</dd>
+          </div>
+          <div>
+            <dt>動作環境</dt>
+            <dd>特になし(Web上で完結するサービスのため)。</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 株式会社MG ActPraise / DOSEN-DEVELOPER — EOF<span class="cursor"></span></p>
+    </footer>
+
+    <script>
+      (() => {
+        const parts = ["actpra", "ise", "@gm", "ail.co", "m"];
+        const email = parts.join("");
+        const el = document.querySelector("[data-contact-address]");
+        if (el) {
+          const a = document.createElement("a");
+          a.href = `mailto:${email}?subject=${encodeURIComponent("LP制作の相談")}`;
+          a.textContent = email;
+          el.replaceWith(a);
+        }
+      })();
+    </script>
+  </body>
+</html>
