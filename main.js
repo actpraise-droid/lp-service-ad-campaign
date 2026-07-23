@@ -19,6 +19,43 @@
     v.addEventListener("pause", () => frame.classList.remove("playing"));
   });
 
+  /* ambient hero film: reduced-motion users get manual controls instead of autoplay;
+     otherwise play only while in view, click toggles */
+  const film = document.querySelector(".film-frame video");
+  if (film) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      film.removeAttribute("autoplay");
+      film.setAttribute("controls", "");
+      film.pause();
+    } else {
+      film.style.cursor = "pointer";
+      film.addEventListener("click", () => {
+        if (film.paused) {
+          delete film.dataset.userPaused;
+          film.play().catch(() => {});
+        } else {
+          film.dataset.userPaused = "1";
+          film.pause();
+        }
+      });
+      if ("IntersectionObserver" in window) {
+        let inView = false;
+        const sync = () => {
+          if (inView && !film.dataset.userPaused) film.play().catch(() => {});
+          else if (!inView) film.pause();
+        };
+        new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            inView = entry.isIntersecting;
+            sync();
+          });
+        }, { threshold: 0.25 }).observe(film);
+        /* autoplay can start after the observer's initial callback — re-check when playback actually begins */
+        film.addEventListener("playing", sync);
+      }
+    }
+  }
+
   /* contact email: assembled at runtime so the raw address isn't sitting in page source (works regardless of motion prefs) */
   const emailParts = ["actpra", "ise", "@gm", "ail.co", "m"];
   const contactEmail = emailParts.join("");
