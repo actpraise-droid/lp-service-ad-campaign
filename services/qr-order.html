@@ -11,6 +11,9 @@
       gtag('config', 'G-6W72X3ZKMM');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <title>店舗QR注文システム開発｜注文・会計・売上まで一つの画面で | 導線デベロッパー</title>
     <meta name="description" content="客席のQRコードから注文し、スタッフの管理画面で対応・会計・売上確認まで行える店舗向けシステムを開発します。カラオケ店向けに構築し稼働中。LP制作とは別サービスとして個別見積で対応します。">
     <meta name="theme-color" content="#edede8">
@@ -22,6 +25,8 @@
     <meta property="og:description" content="客席のQRから注文、スタッフ画面で対応・会計・売上確認まで。カラオケ店向けに構築し稼働中のシステムです。">
     <meta property="og:url" content="https://dosen-lab.co.jp/services/qr-order.html">
     <meta property="og:image" content="https://dosen-lab.co.jp/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,16 +40,50 @@
       "name": "店舗QR注文システム開発",
       "serviceType": "業務システム開発",
       "description": "客席のQRコードから注文し、スタッフの管理画面で対応・会計・売上確認まで行える店舗向けシステムの開発。",
-      "provider": {
-        "@type": "Organization",
-        "name": "株式会社MG ActPraise",
-        "url": "https://dosen-lab.co.jp/"
-      },
+      "provider": { "@id": "https://dosen-lab.co.jp/#organization" },
       "areaServed": "JP"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dosen-lab.co.jp/#organization",
+          "name": "導線デベロッパー",
+          "alternateName": "DOSEN-DEVELOPER",
+          "url": "https://dosen-lab.co.jp/",
+          "areaServed": "JP",
+          "parentOrganization": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://dosen-lab.co.jp/#legal-entity",
+          "name": "株式会社MG ActPraise",
+          "url": "https://dosen-lab.co.jp/",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "248-0033",
+            "addressRegion": "神奈川県",
+            "addressLocality": "鎌倉市",
+            "streetAddress": "腰越3-5-29",
+            "addressCountry": "JP"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://dosen-lab.co.jp/#person-komatsu",
+          "name": "小松 昌",
+          "jobTitle": "代表取締役",
+          "worksFor": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        }
+      ]
     }
     </script>
   </head>
   <body class="legal-body">
+    <a class="skip-link" href="#main">本文へ移動</a>
     <header class="site-header legal-header">
       <a class="brand" href="../index.html">DOSEN-DEVELOPER<span class="brand-jp">導線デベロッパー</span></a>
       <nav aria-label="サイトナビゲーション">
@@ -57,7 +96,7 @@
       <a href="../index.html">トップ</a><a href="../works.html">制作実績</a><a href="../index.html#contact">相談</a>
     </nav>
     <a class="mobile-consult-fixed" href="../index.html#contact">開発を相談する</a>
-    <main class="guide-main">
+    <main id="main" class="guide-main">
       <article class="guide-article">
         <p class="guide-eyebrow">System Development</p>
         <h1>店舗QR注文システム開発</h1>
@@ -134,7 +173,7 @@
       </article>
     </main>
     <footer class="site-footer">
-      <p>© 2026 株式会社MG ActPraise / DOSEN-DEVELOPER / KAMAKURA — EOF</p>
+      <p>© 2026 株式会社MG ActPraise / DOSEN-DEVELOPER / KAMAKURA — EOF<span class="cursor"></span></p>
       <a href="../tokushoho.html" class="footer-legal-link">特定商取引法に基づく表記</a>
       <a href="../privacy.html" class="footer-legal-link">プライバシーポリシー</a>
     </footer>
