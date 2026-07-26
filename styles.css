@@ -1136,6 +1136,11 @@ html:not(.js) .scan {
   text-underline-offset: 3px;
 }
 
+.mobile-quick-nav,
+.mobile-consult-fixed {
+  display: none;
+}
+
 .showcase-works-cta {
   display: flex;
   align-items: center;
@@ -2143,23 +2148,72 @@ html.js .contact-section .lit .mark {
     display: none;
   }
 
-  nav a[href="#price"],
-  nav a[href="#contact"] {
-    display: inline-flex;
-    align-items: center;
-    min-height: 36px;
-    padding: 0 14px;
-    border: 1px solid var(--line);
+  .mobile-quick-nav {
+    position: fixed;
+    inset: 62px 0 auto;
+    z-index: 39;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 48px;
+    background: rgba(10, 10, 12, 0.97);
+    border-bottom: 1px solid var(--line);
   }
 
-  nav a[href="#contact"] {
-    border-color: rgba(205, 255, 0, 0.55);
+  .mobile-quick-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    color: var(--ink);
+    border-right: 1px solid var(--line);
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .mobile-quick-nav a:last-child {
+    border-right: 0;
     color: var(--accent);
+  }
+
+  .mobile-consult-fixed {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 22px;
+    background: var(--accent);
+    color: #0a0a0c;
+    border: 2px solid #0a0a0c;
+    box-shadow: 6px 6px 0 rgba(10, 10, 12, 0.35);
+    font-family: var(--disp);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+  }
+
+  .mobile-consult-fixed::before {
+    content: "▸";
+    margin-right: 7px;
+  }
+
+  .hero {
+    padding-top: 152px;
+  }
+
+  .guide-main,
+  .legal-main {
+    padding-top: 142px;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 104px;
     padding-bottom: 72px;
   }
 
@@ -2247,7 +2301,7 @@ html.js .contact-section .lit .mark {
   }
 
   .hero {
-    padding-top: 96px;
+    padding-top: 142px;
   }
 
   .status-line {
