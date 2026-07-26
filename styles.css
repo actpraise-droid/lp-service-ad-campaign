@@ -2754,3 +2754,38 @@ html.js .contact-section .lit .mark {
     padding-top: 32px;
   }
 }
+
+.contact-fallback a,
+.privacy-sections a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy-sections {
+  display: grid;
+  gap: 1px;
+  margin-top: 32px;
+  background: var(--line-p);
+  border: 1px solid var(--line-p);
+}
+
+.privacy-sections section {
+  padding: 24px 26px;
+  background: var(--paper-card);
+}
+
+.privacy-sections h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.privacy-sections p {
+  margin: 0;
+  color: var(--muted-p);
+  line-height: 1.9;
+}
+
+.privacy-sections p + p {
+  margin-top: 10px;
+}
