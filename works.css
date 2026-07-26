@@ -134,6 +134,8 @@
 .case-visual img {
   display: block;
   width: 100%;
+  /* height属性(presentation hint)がaspect-ratioを打ち消すため明示的にautoへ戻す */
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
