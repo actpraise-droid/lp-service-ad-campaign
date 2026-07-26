@@ -10,6 +10,9 @@
       gtag("config", "G-6W72X3ZKMM");
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <title>外壁塗装会社の広告・LP診断サンプル | 導線デベロッパー</title>
     <meta
       name="description"
@@ -29,6 +32,8 @@
     />
     <meta property="og:url" content="https://dosen-lab.co.jp/reform-web-diagnosis/sample-report.html" />
     <meta property="og:image" content="https://dosen-lab.co.jp/reform-web-diagnosis/assets/og-renovation-diagnosis.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="sample-report.css" />
@@ -48,9 +53,7 @@
             "author": {
               "@id": "https://dosen-lab.co.jp/#person-komatsu"
             },
-            "publisher": {
-              "@id": "https://dosen-lab.co.jp/#legal-entity"
-            },
+            "publisher": {"@id": "https://dosen-lab.co.jp/#organization"},
             "isPartOf": {
               "@id": "https://dosen-lab.co.jp/reform-web-diagnosis/#service"
             }
@@ -80,6 +83,43 @@
           }
         ]
       }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dosen-lab.co.jp/#organization",
+          "name": "導線デベロッパー",
+          "alternateName": "DOSEN-DEVELOPER",
+          "url": "https://dosen-lab.co.jp/",
+          "areaServed": "JP",
+          "parentOrganization": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://dosen-lab.co.jp/#legal-entity",
+          "name": "株式会社MG ActPraise",
+          "url": "https://dosen-lab.co.jp/",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "248-0033",
+            "addressRegion": "神奈川県",
+            "addressLocality": "鎌倉市",
+            "streetAddress": "腰越3-5-29",
+            "addressCountry": "JP"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://dosen-lab.co.jp/#person-komatsu",
+          "name": "小松 昌",
+          "jobTitle": "代表取締役",
+          "worksFor": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        }
+      ]
+    }
     </script>
   </head>
   <body class="report-page">
