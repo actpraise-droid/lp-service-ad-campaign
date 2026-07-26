@@ -2,16 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dosen-lab.co.jp/</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/privacy.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://dosen-lab.co.jp/tokushoho.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.3</priority>
   </url>
@@ -31,13 +26,33 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dosen-lab.co.jp/reform-web-diagnosis/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/reform-web-diagnosis/sample-report.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/reform-ad-no-response.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/exterior-painting-inquiries.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dosen-lab.co.jp/guides/inquiry-flow.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/index.html</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

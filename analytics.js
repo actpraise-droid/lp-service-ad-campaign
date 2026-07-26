@@ -16,6 +16,14 @@
         lead_source: name,
       });
     }
+
+    if (name === "reform_diagnosis_form_open") {
+      window.gtag("event", "form_start", {
+        ...parameters,
+        form_id: "reform_web_diagnosis",
+        form_name: "リフォーム会社向け広告・LP導線診断",
+      });
+    }
   };
 
   document.addEventListener("click", (event) => {
