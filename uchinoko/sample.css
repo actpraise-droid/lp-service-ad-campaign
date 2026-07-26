@@ -1,0 +1,314 @@
+/* =========================================================
+   見本ページ（sample.html）専用スタイル
+   styles.css のあとに読み込んで、トークンを共有しています。
+   ========================================================= */
+
+/* --- 導入 --- */
+.sample-intro {
+  padding: clamp(44px, 6vw, 84px) clamp(18px, 5vw, 48px) clamp(36px, 5vw, 56px);
+  background:
+    radial-gradient(110% 80% at 80% 0%, rgba(246, 239, 228, 0.95) 0%, rgba(253, 250, 245, 0) 62%),
+    var(--paper);
+  text-align: center;
+}
+
+.sample-intro .hero-badges {
+  justify-content: center;
+}
+
+.sample-eyebrow {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+
+.sample-title {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.sample-sub {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 14.5px;
+  letter-spacing: 0.06em;
+}
+
+.sample-intro .lead {
+  text-align: left;
+}
+
+.sample-note {
+  margin: 22px 0 0;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sage);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 14.5px;
+  text-align: left;
+}
+
+/* --- 絵本本編 --- */
+.book {
+  padding: clamp(56px, 8vw, 100px) clamp(18px, 5vw, 48px);
+  background: linear-gradient(180deg, var(--cream) 0%, #f2e9db 100%);
+}
+
+.book-kicker {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(32px, 5vw, 52px);
+}
+
+.book-kicker::after {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+}
+
+.book-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(26px, 3vw, 34px);
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(60, 40, 26, 0.12);
+}
+
+.book-page + .book-page,
+.book-break + .book-page,
+.book-page + .book-break {
+  margin-top: clamp(28px, 4vw, 46px);
+}
+
+/* 本編の途中に挟む申込導線。絵本のページと区別がつくよう、囲まずに横罫で見せる */
+.book-break {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  padding: clamp(26px, 4vw, 36px) clamp(18px, 4vw, 40px);
+  border-top: 1px dashed rgba(184, 84, 60, 0.45);
+  border-bottom: 1px dashed rgba(184, 84, 60, 0.45);
+  text-align: center;
+}
+
+.book-break-text {
+  max-width: 34em;
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* 左右交互にして単調さをなくす（見出しの段落を数えないよう nth-of-type を使う） */
+.book-page:nth-of-type(even) .page-art {
+  order: 2;
+}
+
+.page-art {
+  position: relative;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ece3d5;
+}
+
+.page-art img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.page-art.is-missing img {
+  display: none;
+}
+
+.art-fallback {
+  display: none;
+  place-content: center;
+  gap: 8px;
+  aspect-ratio: 4 / 3;
+  padding: 20px;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.5) 0 10px,
+      rgba(255, 255, 255, 0) 10px 20px
+    ),
+    #e9dfd0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.art-fallback span {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--terracotta-d);
+  letter-spacing: 0.1em;
+}
+
+.art-fallback p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+/* 挿絵がまだ無いページだけ、枠を表示する */
+.page-art.is-missing .art-fallback {
+  display: grid;
+}
+
+.page-text {
+  padding: 4px 0;
+}
+
+.page-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.page-text p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16.5px;
+  line-height: 2.4;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.book-text--large {
+  font-size: 18.5px !important;
+  line-height: 2.5 !important;
+}
+
+/* 表紙 */
+.book-page--cover {
+  background: linear-gradient(155deg, #fffdf9 0%, var(--paper) 100%);
+  box-shadow: 0 26px 64px rgba(60, 40, 26, 0.16);
+}
+
+.book-title {
+  margin: 0 0 14px !important;
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.4vw, 36px) !important;
+  font-weight: 600;
+  line-height: 1.65 !important;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+}
+
+.book-subtitle {
+  font-size: 14px !important;
+  line-height: 2.1 !important;
+  color: var(--muted) !important;
+  letter-spacing: 0.08em;
+}
+
+/* 記念日ページ */
+.book-page--anniversary {
+  background: linear-gradient(155deg, #fdf6ec 0%, var(--paper) 100%);
+  border: 1px solid var(--line);
+}
+
+.book-page--anniversary .page-label {
+  border-color: var(--terracotta);
+  color: var(--terracotta-d);
+}
+
+/* 裏表紙 */
+.book-page--back .book-message {
+  font-size: 16px !important;
+  line-height: 2.35 !important;
+}
+
+.book-signature {
+  margin-top: 18px !important;
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
+  line-height: 1.9 !important;
+  color: var(--muted) !important;
+  letter-spacing: 0.04em;
+}
+
+/* --- CTA・フッター --- */
+.sample-cta {
+  text-align: center;
+}
+
+.sample-cta .lead {
+  text-align: left;
+}
+
+.sample-cta .order-microcopy {
+  margin: 18px 0 0;
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 860px) {
+  .book-page {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .book-page:nth-child(even) .page-art {
+    order: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .sample-intro {
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .sample-intro .hero-badges {
+    justify-content: flex-start;
+  }
+
+  .book {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .book-page {
+    padding: 18px;
+  }
+
+  .page-text p {
+    font-size: 16px;
+    line-height: 2.25;
+  }
+
+  .book-text--large {
+    font-size: 17px !important;
+    line-height: 2.35 !important;
+  }
+
+  .sample-cta {
+    text-align: left;
+  }
+
+  .sample-note {
+    font-size: 14px;
+  }
+}
