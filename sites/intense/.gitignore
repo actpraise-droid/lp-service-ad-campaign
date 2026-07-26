@@ -1,0 +1,3 @@
+# Gemini APIキーなど秘密情報（絶対にコミットしない）
+.env
+scripts/.env
