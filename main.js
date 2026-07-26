@@ -2,7 +2,10 @@
   /* ticker: tap / Enter / Space toggles pause (works regardless of motion prefs) */
   const ts = document.querySelector(".ticker-section");
   if (ts) {
-    const toggle = () => ts.classList.toggle("paused");
+    const toggle = () => {
+      const paused = ts.classList.toggle("paused");
+      ts.setAttribute("aria-pressed", String(paused));
+    };
     ts.addEventListener("click", toggle);
     ts.addEventListener("keydown", (e) => {
       if (e.key === " " || e.key === "Enter") {
@@ -54,6 +57,80 @@
         film.addEventListener("playing", sync);
       }
     }
+  }
+
+  /* film gallery tabs: swap the copy per format (one demo video backs all three) */
+  const filmTabs = document.querySelectorAll(".tab-row .tab");
+  const filmPanel = document.getElementById("film-panel");
+  if (filmTabs.length && filmPanel) {
+    const filmContent = {
+      hero: {
+        title: "ファーストビューに、映画の予告編のような引力を。",
+        desc: "サービスの価値が複雑なほど、文章だけでは伝わりません。短い動画、動くビジュアル、ストーリーの順番を設計し、LPの冒頭で「自分のことだ」と思える入口を作ります。",
+        features: [
+          "ヒーロー動画または動画風セクション",
+          "広告、SNS、営業資料への転用を想定",
+          "成果保証ではなく、理解と相談導線の改善を目的化",
+        ],
+      },
+      sns: {
+        title: "同じ素材から、SNSで指が止まる縦型を切り出す。",
+        desc: "LP用に用意した映像とビジュアルを再編集し、リール・ショート向けの短尺版に展開します。冒頭1秒で何の話か分かる構成に組み替え、音を出さない視聴を前提にテロップを入れます。",
+        features: [
+          "9:16(リール・ショート)と1:1(フィード)へのリサイズ編集",
+          "冒頭フックの組み替えと、字幕・テロップの追加",
+          "広告クリエイティブの差し替えテストにも転用",
+        ],
+      },
+      story: {
+        title: "「なぜこの見せ方なのか」を、制作の過程ごと見せる。",
+        desc: "完成物だけでなく、診断から構成・演出を決めるまでの過程を短い映像にまとめます。発注前の判断材料として、営業資料や信頼設計のセクションに組み込めます。",
+        features: [
+          "診断→構成→演出決定までの過程を可視化",
+          "商談時の説明用として営業資料にも転用",
+          "「何を根拠に決めたか」を示す信頼設計の一部",
+        ],
+      },
+    };
+    const filmTitle = filmPanel.querySelector("[data-film-title]");
+    const filmDesc = filmPanel.querySelector("[data-film-desc]");
+    const filmFeatures = filmPanel.querySelector("[data-film-features]");
+    const activateFilmTab = (tab) => {
+      const data = filmContent[tab.dataset.tab];
+      if (!data) return;
+      filmTabs.forEach((t) => {
+        const on = t === tab;
+        t.classList.toggle("active", on);
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      filmPanel.setAttribute("aria-labelledby", tab.id);
+      if (filmTitle) filmTitle.textContent = data.title;
+      if (filmDesc) filmDesc.textContent = data.desc;
+      if (filmFeatures) {
+        filmFeatures.replaceChildren(
+          ...data.features.map((text) => {
+            const li = document.createElement("li");
+            li.textContent = text;
+            return li;
+          })
+        );
+      }
+    };
+    filmTabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => activateFilmTab(tab));
+      tab.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          const next = filmTabs[(i + (e.key === "ArrowRight" ? 1 : -1) + filmTabs.length) % filmTabs.length];
+          next.focus();
+          activateFilmTab(next);
+        } else if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activateFilmTab(tab);
+        }
+      });
+    });
   }
 
   /* contact email: assembled at runtime so the raw address isn't sitting in page source (works regardless of motion prefs) */

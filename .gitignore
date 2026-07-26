@@ -1,4 +1,5 @@
 assets/*.png
+!assets/apple-touch-icon.png
 .env
 Thumbs.db
 desktop.ini
