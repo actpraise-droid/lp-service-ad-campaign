@@ -171,6 +171,26 @@
   outline-offset: 4px;
 }
 
+/* リンクを張らず画像のみ掲載する事例用。<a> ではなく <div class="case-visual static"> で使う */
+.case-visual.static {
+  cursor: default;
+}
+
+.case-visual.static:hover::before {
+  opacity: 0;
+}
+
+.case-visual.static:hover img {
+  transform: none;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.case-visual.static span {
+  background: var(--panel-2);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
 .case-no {
   margin: 0 0 12px;
   font-family: var(--mono);
