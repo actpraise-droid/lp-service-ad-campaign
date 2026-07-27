@@ -10,7 +10,7 @@
     window.gtag("event", name, parameters);
 
     // GA4で既にキーイベントに設定済みの推奨イベントにも接続する。
-    if (name === "contact_form_open" || name === "email_click") {
+    if (name === "contact_form_open" || name === "email_click" || name === "line_click") {
       window.gtag("event", "qualify_lead", {
         ...parameters,
         lead_source: name,
@@ -41,6 +41,8 @@
       send("contact_click", link);
     } else if (href.startsWith("mailto:")) {
       send("email_click", link);
+    } else if (href.includes("lin.ee") || href.includes("line.me")) {
+      send("line_click", link);
     } else if (href.includes("works.html")) {
       send("works_view", link);
     } else if (link.matches(".case-study a[target='_blank']")) {

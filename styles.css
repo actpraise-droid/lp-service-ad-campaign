@@ -2010,6 +2010,37 @@ html.js .contact-section .lit .mark {
   transform: translateX(5px);
 }
 
+/* LINE: keep the brand green so it is recognisable at a glance */
+.button.line {
+  --line-green: #06c755;
+  background: var(--line-green);
+  border: 1px solid var(--line-green);
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.button.line::before {
+  content: "▸";
+  font-family: var(--mono);
+}
+
+.button.line:hover {
+  transform: translate(-2px, -2px);
+  background: #05b34c;
+  border-color: #05b34c;
+}
+
+.button.line:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.contact-actions .button.line {
+  min-height: 58px;
+  padding: 0 30px;
+  font-size: 16px;
+}
+
 .contact-fallback {
   margin-top: 16px;
   font-family: var(--mono);
