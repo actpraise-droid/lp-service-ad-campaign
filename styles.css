@@ -1190,6 +1190,22 @@ html:not(.js) .scan {
   text-underline-offset: 3px;
 }
 
+/* two links in one card must not read as a single run-on line */
+.showcase-guide-link + .showcase-guide-link {
+  margin-left: 26px;
+}
+
+@media (max-width: 700px) {
+  .showcase-guide-link + .showcase-guide-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .showcase-card .showcase-guide-link {
+    display: block;
+    width: fit-content;
+  }
+}
+
 .mobile-quick-nav,
 .mobile-consult-fixed {
   display: none;
