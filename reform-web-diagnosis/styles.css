@@ -1786,6 +1786,21 @@ dl {
   margin-top: 8px;
 }
 
+/* リフォーム以外の訪問者の逃げ道。特化の訴求を薄めないよう控えめに置く */
+.other-industry-note {
+  width: min(var(--content), 100%);
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.other-industry-note a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .related-guide-grid h3 a {
   color: var(--forest);
 }
