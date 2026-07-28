@@ -104,7 +104,7 @@
         src: "assets/campaign-film-process.mp4",
         poster: "assets/campaign-process-poster.jpg",
         ratio: "16-9",
-        cap: "FIG.02 — PROCESS FILM / 16:9 / 6 STEPS",
+        cap: "FIG.02 — PROCESS FILM / 16:9 / 6 STEPS / 12s",
         alt: "診断から公開前QAまでの6工程を追った映像(クリックで一時停止)",
       },
     };
