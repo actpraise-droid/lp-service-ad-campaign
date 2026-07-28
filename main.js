@@ -59,7 +59,8 @@
     }
   }
 
-  /* film gallery tabs: swap the copy per format (one demo video backs all three) */
+  /* film gallery tabs: each tab swaps the copy AND the actual demo film,
+     so the format being described is the one on screen */
   const filmTabs = document.querySelectorAll(".tab-row .tab");
   const filmPanel = document.getElementById("film-panel");
   if (filmTabs.length && filmPanel) {
@@ -72,6 +73,11 @@
           "広告、SNS、営業資料への転用を想定",
           "成果保証ではなく、理解と相談導線の改善を目的化",
         ],
+        src: "assets/campaign-film-loop.mp4",
+        poster: "assets/campaign-hero.webp",
+        ratio: "16-9",
+        cap: "FIG.02 — HERO FILM / 16:9 / LOOP",
+        alt: "制作スタジオのイメージ映像(クリックで一時停止)",
       },
       sns: {
         title: "同じ素材から、SNSで指が止まる縦型を切り出す。",
@@ -81,6 +87,11 @@
           "冒頭フックの組み替えと、字幕・テロップの追加",
           "広告クリエイティブの差し替えテストにも転用",
         ],
+        src: "assets/campaign-film-vertical.mp4",
+        poster: "assets/campaign-vertical-poster.jpg",
+        ratio: "9-16",
+        cap: "FIG.02 — SNS CUT / 9:16 / LOOP",
+        alt: "同じ素材から切り出した縦型の短尺版(クリックで一時停止)",
       },
       story: {
         title: "「なぜこの見せ方なのか」を、制作の過程ごと見せる。",
@@ -90,11 +101,20 @@
           "商談時の説明用として営業資料にも転用",
           "「何を根拠に決めたか」を示す信頼設計の一部",
         ],
+        src: "assets/campaign-film-process.mp4",
+        poster: "assets/campaign-process-poster.jpg",
+        ratio: "16-9",
+        cap: "FIG.02 — PROCESS FILM / 16:9 / 6 STEPS",
+        alt: "診断から公開前QAまでの6工程を追った映像(クリックで一時停止)",
       },
     };
     const filmTitle = filmPanel.querySelector("[data-film-title]");
     const filmDesc = filmPanel.querySelector("[data-film-desc]");
     const filmFeatures = filmPanel.querySelector("[data-film-features]");
+    const filmFigure = document.querySelector(".film-frame");
+    const filmVideo = filmFigure && filmFigure.querySelector("video");
+    const filmCap = document.querySelector("[data-film-cap]");
+
     const activateFilmTab = (tab) => {
       const data = filmContent[tab.dataset.tab];
       if (!data) return;
@@ -116,6 +136,17 @@
           })
         );
       }
+      /* swap the film itself so the format described is the one playing */
+      if (filmVideo && !filmVideo.src.endsWith(data.src)) {
+        const wasPaused = filmVideo.dataset.userPaused === "1";
+        filmVideo.poster = data.poster;
+        filmVideo.setAttribute("aria-label", data.alt);
+        filmVideo.src = data.src;
+        filmVideo.load();
+        if (!wasPaused) filmVideo.play().catch(() => {});
+      }
+      if (filmFigure) filmFigure.dataset.ratio = data.ratio;
+      if (filmCap) filmCap.textContent = data.cap;
     };
     filmTabs.forEach((tab, i) => {
       tab.addEventListener("click", () => activateFilmTab(tab));

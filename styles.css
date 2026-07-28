@@ -862,6 +862,22 @@ html.js.booted .hero .mark {
   background: #000;
 }
 
+/* the SNS tab plays a real 9:16 cut, so the frame has to shrink around it
+   instead of stretching a portrait film across the full column */
+.film-frame[data-ratio="9-16"] .plate-frame {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/* width must be stated outright: a fit-content parent plus an auto-width child
+   deadlock each other and collapse the frame to nothing */
+.film-frame[data-ratio="9-16"] video {
+  --film-h: min(66vh, 540px);
+  aspect-ratio: auto;
+  height: var(--film-h);
+  width: calc(var(--film-h) * 9 / 16);
+}
+
 .scan {
   position: absolute;
   inset: 0;
