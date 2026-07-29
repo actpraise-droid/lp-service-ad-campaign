@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1180" width="1000" height="1180">
+  <title>SNS自動投稿システムの運用フロー：スタッフがLINEに写真を送り、AIが媒体別に文章を生成し、オーナーが承認し、3媒体へ配信される4ステップ</title>
+  <defs>
+    <pattern id="grid01" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .hd { font-weight: 700; font-size: 40px; fill: #0e0e10; }
+    .dt { font-size: 28px; fill: #55554f; }
+    .ac { font-size: 26px; fill: #55554f; }
+    .no { font-weight: 700; font-size: 60px; fill: #0e0e10; }
+  </style>
+
+  <rect width="1000" height="1180" fill="#ffffff"/>
+  <rect width="1000" height="1180" fill="url(#grid01)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/>
+    <path d="M969 24h14M976 17v14"/>
+    <path d="M17 1156h14M24 1149v14"/>
+    <path d="M969 1156h14M976 1149v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">OPERATION FLOW</text>
+
+  <!-- STEP 01 -->
+  <rect x="40" y="96" width="920" height="212" fill="#ffffff" stroke="#0e0e10" stroke-width="2"/>
+  <rect x="40" y="96" width="10" height="212" fill="#cdff00"/>
+  <text class="m no" x="76" y="182">01</text>
+  <text class="j ac" x="76" y="236">現場スタッフ</text>
+  <line x1="252" y1="124" x2="252" y2="280" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="290" y="184">LINEに写真と一言を送る</text>
+  <text class="j dt" x="290" y="236">写真は複数枚可。最後に「完了」と入力</text>
+  <text class="j dt" x="290" y="276">例：トイレの床張り替え終わりました</text>
+
+  <line x1="146" y1="308" x2="146" y2="338" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M138 338h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- STEP 02 -->
+  <rect x="40" y="352" width="920" height="212" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="438">02</text>
+  <text class="j ac" x="76" y="492">AI・システム</text>
+  <line x1="252" y1="380" x2="252" y2="536" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="290" y="440">AIが媒体ごとに書き分ける</text>
+  <text class="j dt" x="290" y="492">同じ文章は使い回さない</text>
+  <text class="j dt" x="290" y="532">媒体の性格に合わせて個別に生成</text>
+
+  <line x1="146" y1="564" x2="146" y2="594" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M138 594h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- STEP 03 -->
+  <rect x="40" y="608" width="920" height="212" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="694">03</text>
+  <text class="j ac" x="76" y="748">オーナー</text>
+  <line x1="252" y1="636" x2="252" y2="792" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="290" y="696">オーナーがLINEで承認</text>
+  <text class="j dt" x="290" y="748">本文修正・投稿先選択・写真の除外</text>
+  <text class="j dt" x="290" y="788">承認しない限り外部には出ない</text>
+
+  <line x1="146" y1="820" x2="146" y2="850" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M138 850h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- STEP 04 -->
+  <rect x="40" y="864" width="920" height="212" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="950">04</text>
+  <text class="j ac" x="76" y="1004">システム</text>
+  <line x1="252" y1="892" x2="252" y2="1048" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="290" y="952">配信して結果を通知する</text>
+  <text class="j dt" x="290" y="1004">承認された媒体だけに投稿される</text>
+  <text class="j dt" x="290" y="1044">結果はLINEに返る</text>
+
+  <rect x="40" y="1108" width="10" height="26" fill="#cdff00"/>
+  <text class="j" x="64" y="1129" font-size="28" fill="#0e0e10">スタッフの作業は 01 のみ。オーナーは 03 で承認するだけです。</text>
+</svg>

@@ -2772,6 +2772,7 @@ html.js .contact-section .lit .mark {
 .guide-sample img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .guide-sample figcaption {

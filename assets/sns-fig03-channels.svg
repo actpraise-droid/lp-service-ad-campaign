@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="1000" height="1300">
+  <title>スタッフが送った1件の写真とコメントから、Googleビジネスプロフィール・Instagram・Xの3媒体それぞれに合わせた別々の文章が生成される様子を示した図</title>
+  <defs>
+    <pattern id="grid03" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .ch { font-weight: 700; font-size: 32px; fill: #0e0e10; }
+    .po { font-size: 24px; fill: #0e0e10; }
+    .ft { font-size: 20px; fill: #55554f; }
+    .cp { font-size: 20px; fill: #0e0e10; }
+  </style>
+
+  <rect width="1000" height="1300" fill="#ffffff"/>
+  <rect width="1000" height="1300" fill="url(#grid03)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/>
+    <path d="M969 24h14M976 17v14"/>
+    <path d="M17 1276h14M24 1269v14"/>
+    <path d="M969 1276h14M976 1269v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">ONE INPUT, THREE OUTPUTS</text>
+
+  <!-- source -->
+  <rect x="40" y="96" width="920" height="200" fill="#ffffff" stroke="#0e0e10" stroke-width="2"/>
+  <rect x="40" y="96" width="10" height="200" fill="#cdff00"/>
+  <text class="j" x="70" y="134" font-size="22" fill="#55554f">スタッフがLINEに送った1件</text>
+  <rect x="70" y="150" width="120" height="120" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+  <g fill="#c9c9c2">
+    <circle cx="100" cy="186" r="10"/>
+    <path d="M82 252l32-40 24 30 16-16 18 26z"/>
+  </g>
+  <text class="j" x="222" y="204" font-size="32" fill="#0e0e10">トイレの床張り替え終わりました</text>
+  <text class="j" x="222" y="248" font-size="24" fill="#55554f">写真3枚を添付 ／ 最後に「完了」と入力</text>
+
+  <!-- bus -->
+  <line x1="100" y1="296" x2="100" y2="1096" stroke="#c9c9c2" stroke-width="1.5"/>
+  <g stroke="#0e0e10" stroke-width="1.5" fill="#0e0e10">
+    <line x1="100" y1="476" x2="128" y2="476"/>
+    <path d="M128 469l14 7-14 7z"/>
+    <line x1="100" y1="796" x2="128" y2="796"/>
+    <path d="M128 789l14 7-14 7z"/>
+    <line x1="100" y1="1096" x2="128" y2="1096"/>
+    <path d="M128 1089l14 7-14 7z"/>
+  </g>
+
+  <!-- card 1 : Google Business Profile -->
+  <rect x="142" y="336" width="818" height="280" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j ch" x="172" y="388">Googleビジネスプロフィール</text>
+  <rect x="750" y="360" width="190" height="34" fill="#cdff00"/>
+  <text class="j cp" x="845" y="384" text-anchor="middle">役割：マップ露出</text>
+  <rect x="172" y="410" width="758" height="152" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j po" x="196" y="452">鎌倉市腰越でトイレの床の張り替えを行いました。</text>
+  <text class="j po" x="196" y="490">既存の床材を撤去し、耐水性の床材へ交換しています。</text>
+  <text class="j po" x="196" y="528">作業は半日で完了しました。</text>
+  <text class="j ft" x="172" y="594">地域名と業種を含む、検索されたときに意味が通る説明文にする</text>
+
+  <!-- card 2 : Instagram -->
+  <rect x="142" y="656" width="818" height="280" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j ch" x="172" y="708">Instagram</text>
+  <rect x="730" y="680" width="210" height="34" fill="#cdff00"/>
+  <text class="j cp" x="835" y="704" text-anchor="middle">役割：ビジュアル訴求</text>
+  <rect x="190" y="746" width="110" height="110" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+  <rect x="181" y="738" width="110" height="110" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+  <rect x="172" y="730" width="110" height="110" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+  <g fill="#c9c9c2">
+    <circle cx="200" cy="762" r="9"/>
+    <path d="M184 824l28-34 21 26 14-14 16 22z"/>
+  </g>
+  <rect x="238" y="846" width="52" height="26" fill="#0e0e10"/>
+  <text class="m" x="264" y="865" font-size="17" fill="#f1f1ec" text-anchor="middle">1/3</text>
+  <rect x="330" y="730" width="600" height="110" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j po" x="352" y="772">トイレの床、張り替え完了しました。</text>
+  <text class="j" x="352" y="810" font-size="22" fill="#55554f">#鎌倉市 #リフォーム #トイレリフォーム</text>
+  <text class="j ft" x="172" y="912">複数枚をまとめたカルーセル投稿に対応。ハッシュタグは店舗設定から</text>
+
+  <!-- card 3 : X -->
+  <rect x="142" y="976" width="818" height="240" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j ch" x="172" y="1028">X（旧Twitter）</text>
+  <rect x="780" y="1000" width="160" height="34" fill="#cdff00"/>
+  <text class="j cp" x="860" y="1024" text-anchor="middle">役割：更新頻度</text>
+  <rect x="172" y="1050" width="758" height="112" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j po" x="196" y="1094">本日はトイレの床張り替え。無事に完了しました。</text>
+  <text class="j" x="196" y="1132" font-size="22" fill="#55554f">#鎌倉市 #リフォーム</text>
+  <text class="j ft" x="172" y="1192">短文で更新頻度を確保し、会社が動いていることを外から見える形にする</text>
+
+  <text class="j" x="40" y="1262" font-size="24" fill="#55554f">※ 文面はサンプルです。実際の生成結果は店舗ごとの設定により変わります。</text>
+</svg>

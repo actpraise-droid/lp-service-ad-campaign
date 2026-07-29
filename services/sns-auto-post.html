@@ -123,10 +123,18 @@
             <li><strong>3. オーナーがLINEで承認：</strong>承認用リンクがオーナーの個人LINEに届く。文章の修正、投稿先の選択、写真の並び替えと除外がその場でできる</li>
             <li><strong>4. 配信と結果通知：</strong>選んだ媒体へ投稿され、結果がLINEに返る</li>
           </ul>
+          <figure class="guide-sample">
+            <img src="../assets/sns-fig01-flow.svg" alt="運用フローの図。01 現場スタッフがLINEに写真と一言を送る、02 AIが媒体ごとに文章を書き分ける、03 オーナーがLINEで承認する、04 承認された媒体だけに配信して結果を通知する、という4ステップを縦に並べた図。手作業は01のみで、02から04は自動で進む。" width="1000" height="1180" loading="lazy" decoding="async">
+            <figcaption>図01 — 手作業が発生するのは最初の1回だけで、残りは自動で進みます。</figcaption>
+          </figure>
         </section>
 
         <section class="guide-section">
           <h2>3つの媒体と、それぞれの狙い</h2>
+          <figure class="guide-sample">
+            <img src="../assets/sns-fig03-channels.svg" alt="1件の入力から3媒体それぞれの投稿文が生成される図。スタッフが送った写真とコメント1件をもとに、Googleビジネスプロフィールには地域名と業種を含む説明文、Instagramには短い本文とハッシュタグ付きのカルーセル投稿、Xには1行程度の短文が、それぞれ別々に生成される。" width="1000" height="1300" loading="lazy" decoding="async">
+            <figcaption>図02 — 同じ文章を使い回さず、媒体ごとに長さも書き方も変えて生成します（文面はサンプル）。</figcaption>
+          </figure>
           <div class="guide-table-wrap">
             <table class="guide-table">
               <caption>媒体ごとの役割</caption>
@@ -148,6 +156,10 @@
             <li><strong>店舗ごとのブランドルール：</strong>対応エリア、自社の強み、必ず入れるハッシュタグ、使ってはいけない言葉（「最安値」など）、文体の方針を店舗単位で設定し、誰が送っても会社のトーンが崩れないようにする</li>
             <li><strong>写真は投稿後に自動削除：</strong>配信が終わった写真はサーバーから消す。投稿自体は各SNS上に残るため見返せる</li>
           </ul>
+          <figure class="guide-sample">
+            <img src="../assets/sns-fig02-approval.svg" alt="オーナーのスマートフォン承認画面のイメージ図。AIが生成した本文はその場で編集でき、投稿先はGoogleビジネスプロフィール・X・Instagramごとにオンオフを切り替えられ、写真は並べ替えと除外ができる。画面下部の承認ボタンを押すまで外部には投稿されない。" width="1000" height="1200" loading="lazy" decoding="async">
+            <figcaption>図03 — オーナーが承認するまで投稿されません。修正・媒体選択・写真の除外はこの1画面で完結します。</figcaption>
+          </figure>
         </section>
 
         <section class="guide-section">
@@ -177,6 +189,10 @@
             <li>初期設定と各SNSとの接続作業（こちらで実施します）</li>
           </ul>
           <p>サーバー費用、AIの文章生成費用、Xの投稿費用は提供側が負担する構造で設計しています。店舗側が個別にAPI契約を結んだり、追加費用を払ったりする必要はありません。</p>
+          <figure class="guide-sample">
+            <img src="../assets/sns-fig04-scope.svg" alt="導入時の分担図。店舗側が用意するのは投稿用のLINEグループ、各SNSアカウント、現場で撮った写真の3つ。提供側が負担するのは初期設定とSNS接続作業、サーバー費用、AI文章生成の費用、Xの投稿費用。店舗側での追加API契約や追加費用は必要ない。" width="1000" height="800" loading="lazy" decoding="async">
+            <figcaption>図04 — 店舗側で用意するのは3つだけで、運用にかかる費用は提供側が持ちます。</figcaption>
+          </figure>
         </section>
 
         <section class="guide-section">

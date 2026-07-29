@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" width="1000" height="1200">
+  <title>オーナーのスマートフォン承認画面のイメージ図。AIが生成した本文の編集、投稿先の媒体ごとのON/OFF、写真の並べ替えと除外ができ、承認するまで外部には投稿されない</title>
+  <defs>
+    <pattern id="grid02" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .lb { font-size: 22px; fill: #55554f; }
+    .ui { font-size: 26px; fill: #0e0e10; }
+    .cal { font-weight: 700; font-size: 26px; fill: #0e0e10; }
+    .sub { font-size: 21px; fill: #55554f; }
+  </style>
+
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <rect width="1000" height="1200" fill="url(#grid02)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/>
+    <path d="M969 24h14M976 17v14"/>
+    <path d="M17 1176h14M24 1169v14"/>
+    <path d="M969 1176h14M976 1169v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">APPROVAL SCREEN</text>
+
+  <!-- phone -->
+  <rect x="40" y="96" width="600" height="1010" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+  <rect x="40" y="96" width="600" height="64" fill="#0e0e10"/>
+  <text class="j" x="66" y="137" font-size="26" fill="#f1f1ec">承認画面</text>
+  <text class="j" x="614" y="136" font-size="20" fill="#b9b9b1" text-anchor="end">オーナーのみ</text>
+
+  <!-- body preview -->
+  <text class="j lb" x="66" y="204">本文（編集できます）</text>
+  <rect x="66" y="220" width="548" height="176" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j ui" x="90" y="264">鎌倉市腰越でトイレの床の</text>
+  <text class="j ui" x="90" y="304">張り替えを行いました。耐水</text>
+  <text class="j ui" x="90" y="344">性の床材に交換しています。</text>
+  <g stroke="#55554f" stroke-width="2" fill="none">
+    <path d="M566 258l12-12 8 8-12 12z"/>
+    <path d="M566 258v8h8"/>
+  </g>
+
+  <!-- destination toggles -->
+  <text class="j lb" x="66" y="446">投稿先（媒体ごとに選べます）</text>
+  <text class="j ui" x="66" y="502">Googleビジネスプロフィール</text>
+  <rect x="524" y="476" width="76" height="36" fill="#cdff00" stroke="#0e0e10" stroke-width="1.5"/>
+  <rect x="566" y="476" width="34" height="36" fill="#0e0e10"/>
+  <line x1="66" y1="524" x2="614" y2="524" stroke="#c9c9c2" stroke-width="1"/>
+
+  <text class="j ui" x="66" y="572">X（旧Twitter）</text>
+  <rect x="524" y="546" width="76" height="36" fill="#cdff00" stroke="#0e0e10" stroke-width="1.5"/>
+  <rect x="566" y="546" width="34" height="36" fill="#0e0e10"/>
+  <line x1="66" y1="594" x2="614" y2="594" stroke="#c9c9c2" stroke-width="1"/>
+
+  <text class="j ui" x="66" y="642">Instagram</text>
+  <rect x="524" y="616" width="76" height="36" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <rect x="524" y="616" width="34" height="36" fill="#c9c9c2"/>
+
+  <!-- photos -->
+  <text class="j lb" x="66" y="706">写真（並べ替え・除外できます）</text>
+  <g fill="#c9c9c2">
+    <rect x="66" y="724" width="140" height="140" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+    <circle cx="102" cy="766" r="11"/>
+    <path d="M80 840l38-46 28 34 20-18 20 30z"/>
+    <rect x="270" y="724" width="140" height="140" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+    <circle cx="306" cy="766" r="11"/>
+    <path d="M284 840l38-46 28 34 20-18 20 30z"/>
+    <rect x="474" y="724" width="140" height="140" fill="#edede8" stroke="#c9c9c2" stroke-width="1.5"/>
+    <circle cx="510" cy="766" r="11"/>
+    <path d="M488 840l38-46 28 34 20-18 20 30z"/>
+  </g>
+  <g stroke="#0e0e10" stroke-width="1.5" fill="#0e0e10">
+    <line x1="218" y1="794" x2="258" y2="794"/>
+    <path d="M218 794l12-6v12zM258 794l-12-6v12z"/>
+    <line x1="422" y1="794" x2="462" y2="794"/>
+    <path d="M422 794l12-6v12zM462 794l-12-6v12z"/>
+  </g>
+  <circle cx="604" cy="734" r="18" fill="#c1210f"/>
+  <g stroke="#ffffff" stroke-width="3">
+    <path d="M597 727l14 14M611 727l-14 14"/>
+  </g>
+
+  <!-- approve button -->
+  <rect x="66" y="926" width="548" height="88" fill="#cdff00" stroke="#0e0e10" stroke-width="2"/>
+  <text class="j" x="340" y="982" font-size="36" font-weight="700" fill="#0e0e10" text-anchor="middle">承認して投稿</text>
+  <text class="j" x="340" y="1044" font-size="22" fill="#55554f" text-anchor="middle">承認するまで外部には出ません</text>
+  <rect x="290" y="1078" width="100" height="6" fill="#c9c9c2"/>
+
+  <!-- callouts -->
+  <g stroke="#c9c9c2" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="640" y1="300" x2="668" y2="300"/>
+    <line x1="640" y1="560" x2="668" y2="560"/>
+    <line x1="640" y1="794" x2="668" y2="794"/>
+    <line x1="640" y1="970" x2="668" y2="970"/>
+  </g>
+
+  <rect x="668" y="240" width="8" height="26" fill="#cdff00"/>
+  <text class="j cal" x="690" y="262">店舗ごとの</text>
+  <text class="j cal" x="690" y="300">ルールを自動適用</text>
+  <text class="j sub" x="690" y="340">・対応エリア</text>
+  <text class="j sub" x="690" y="370">・必須ハッシュタグ</text>
+  <text class="j sub" x="690" y="400">・使わない言葉</text>
+  <text class="j sub" x="690" y="430">・文体の方針</text>
+
+  <rect x="668" y="510" width="8" height="26" fill="#cdff00"/>
+  <text class="j cal" x="690" y="532">媒体ごとに</text>
+  <text class="j cal" x="690" y="570">ON / OFF</text>
+  <text class="j sub" x="690" y="610">出したくない媒体は</text>
+  <text class="j sub" x="690" y="640">その場で外せます</text>
+
+  <rect x="668" y="750" width="8" height="26" fill="#cdff00"/>
+  <text class="j cal" x="690" y="772">不要な写真は</text>
+  <text class="j cal" x="690" y="810">除外できる</text>
+  <text class="j sub" x="690" y="850">順番の入れ替えも</text>
+  <text class="j sub" x="690" y="880">同じ画面で完了</text>
+
+  <rect x="668" y="926" width="8" height="26" fill="#c1210f"/>
+  <text class="j cal" x="690" y="948">承認しない限り</text>
+  <text class="j cal" x="690" y="986">投稿されない</text>
+  <text class="j sub" x="690" y="1026">スタッフが送った</text>
+  <text class="j sub" x="690" y="1056">内容がそのまま</text>
+  <text class="j sub" x="690" y="1086">外に出ることは</text>
+  <text class="j sub" x="690" y="1116">ありません</text>
+
+  <text class="j" x="40" y="1160" font-size="24" fill="#55554f">※ 画面・文面はサンプルです。実際の表示は端末や設定により異なります。</text>
+</svg>
