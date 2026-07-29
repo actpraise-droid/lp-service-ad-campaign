@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W72X3ZKMM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6W72X3ZKMM');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <title>SNS自動投稿システム開発｜LINEに写真を送るだけで3媒体へ | 導線デベロッパー</title>
+    <meta name="description" content="現場スタッフがLINEに写真を送るだけで、AIが媒体ごとに文章を書き分け、オーナーの承認を経てGoogleビジネスプロフィール・X・Instagramへ投稿する仕組みを開発しています。自社で本番稼働中。">
+    <meta name="theme-color" content="#edede8">
+    <link rel="canonical" href="https://dosen-lab.co.jp/services/sns-auto-post.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="導線デベロッパー">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="SNS自動投稿システム開発｜LINEに写真を送るだけで3媒体へ">
+    <meta property="og:description" content="新しいアプリを覚えずに、現場のLINEから投稿が続く状態をつくる仕組み。AIが媒体ごとに文章を生成し、オーナー承認を経て配信します。">
+    <meta property="og:url" content="https://dosen-lab.co.jp/services/sns-auto-post.html">
+    <meta property="og:image" content="https://dosen-lab.co.jp/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://dosen-lab.co.jp/services/sns-auto-post.html#service",
+      "name": "SNS自動投稿システム開発",
+      "serviceType": "業務システム開発",
+      "description": "現場のLINEに送られた写真とコメントから、AIが媒体ごとの投稿文を生成し、オーナーの承認を経てGoogleビジネスプロフィール・X・Instagramへ配信する店舗向けの仕組みの開発。",
+      "provider": { "@id": "https://dosen-lab.co.jp/#organization" },
+      "areaServed": "JP"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dosen-lab.co.jp/#organization",
+          "name": "導線デベロッパー",
+          "alternateName": "DOSEN-DEVELOPER",
+          "url": "https://dosen-lab.co.jp/",
+          "areaServed": "JP",
+          "parentOrganization": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://dosen-lab.co.jp/#legal-entity",
+          "name": "株式会社MG ActPraise",
+          "url": "https://dosen-lab.co.jp/",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "248-0033",
+            "addressRegion": "神奈川県",
+            "addressLocality": "鎌倉市",
+            "streetAddress": "腰越3-5-29",
+            "addressCountry": "JP"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://dosen-lab.co.jp/#person-komatsu",
+          "name": "小松 昌",
+          "jobTitle": "代表取締役",
+          "worksFor": { "@id": "https://dosen-lab.co.jp/#legal-entity" }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="legal-body">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header legal-header">
+      <a class="brand" href="../index.html">DOSEN-DEVELOPER<span class="brand-jp">導線デベロッパー</span></a>
+      <nav aria-label="サイトナビゲーション">
+        <a href="lp-production.html">LP制作</a>
+        <a href="../works.html">制作実績</a>
+        <a href="../index.html#contact">相談</a>
+      </nav>
+    </header>
+    <nav class="mobile-quick-nav" aria-label="スマートフォン用メニュー">
+      <a href="../index.html">トップ</a><a href="../works.html">制作実績</a><a href="../index.html#contact">相談</a>
+    </nav>
+    <a class="mobile-consult-fixed" href="../index.html#contact">開発を相談する</a>
+    <main id="main" class="guide-main">
+      <article class="guide-article">
+        <p class="guide-eyebrow">System Development</p>
+        <h1>SNS自動投稿システム開発</h1>
+        <p class="guide-lead">現場のスタッフがいつも使っているLINEに、写真と一言コメントを送るだけ。AIが媒体ごとに文章を書き分け、オーナーがスマホでワンタップ承認すると、Googleビジネスプロフィール・X・Instagramへ投稿されます。新しいアプリを覚える必要はありません。自社で本番稼働させながら開発しています。</p>
+
+        <section class="guide-section">
+          <h2>なぜ投稿が続かないのか</h2>
+          <p class="guide-answer">地域の店舗にとってGoogleマップとSNSは集客に直結しますが、止まる理由はやる気ではなく、手順の多さにあります。</p>
+          <ul>
+            <li>施工写真は撮っているが、投稿されないまま溜まっていく</li>
+            <li>媒体ごとに文章を書き分けるのが手間で、続かない</li>
+            <li>「SNS担当」が辞めると、そのまま更新が止まる</li>
+            <li>何を書けばいいか分からず、投稿の質にばらつきが出る</li>
+          </ul>
+          <p>この仕組みが目指すのは「投稿を増やすこと」ではなく、<strong>何もしていないのに投稿が続いている状態</strong>をつくることです。</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>現場の流れ</h2>
+          <p class="guide-answer">スタッフが覚えることは「LINEに写真を送って完了と打つ」だけです。技術的な作業は発生しません。</p>
+          <ul>
+            <li><strong>1. スタッフが写真を送る：</strong>専用のLINEグループに写真（複数枚可）と一言コメントを送り、最後に「完了」と入力する（例：「トイレの床張り替え終わりました」＋写真3枚）</li>
+            <li><strong>2. AIが媒体ごとに文章を生成：</strong>同じ文章を使い回さず、媒体の性格に合わせて個別に書き分ける</li>
+            <li><strong>3. オーナーがLINEで承認：</strong>承認用リンクがオーナーの個人LINEに届く。文章の修正、投稿先の選択、写真の並び替えと除外がその場でできる</li>
+            <li><strong>4. 配信と結果通知：</strong>選んだ媒体へ投稿され、結果がLINEに返る</li>
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>3つの媒体と、それぞれの狙い</h2>
+          <div class="guide-table-wrap">
+            <table class="guide-table">
+              <caption>媒体ごとの役割</caption>
+              <thead><tr><th>媒体</th><th>主な役割</th><th>狙い</th></tr></thead>
+              <tbody>
+                <tr><th>Googleビジネスプロフィール</th><td>マップ・検索での露出（MEO）</td><td>「地域名＋業種」で探している人への接触。集客に最も直結する</td></tr>
+                <tr><th>Instagram</th><td>施工事例のビジュアル訴求</td><td>複数枚をまとめたカルーセル投稿に対応</td></tr>
+                <tr><th>X（旧Twitter）</th><td>短文での更新頻度の確保</td><td>会社が動いていることが外から見える状態をつくる</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>設計上こだわった点</h2>
+          <ul>
+            <li><strong>アプリを増やさない：</strong>現場が使うのは既存のLINEのみ。導入教育が要らないため、初日から運用が回る</li>
+            <li><strong>誤投稿を構造的に防ぐ：</strong>投稿は必ずオーナー承認を経る。スタッフが送った内容がそのまま外に出ることはない</li>
+            <li><strong>店舗ごとのブランドルール：</strong>対応エリア、自社の強み、必ず入れるハッシュタグ、使ってはいけない言葉（「最安値」など）、文体の方針を店舗単位で設定し、誰が送っても会社のトーンが崩れないようにする</li>
+            <li><strong>写真は投稿後に自動削除：</strong>配信が終わった写真はサーバーから消す。投稿自体は各SNS上に残るため見返せる</li>
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>開発状況（2026年7月28日時点）</h2>
+          <p class="guide-answer">構想段階ではなく、すでに本番環境で動いています。ただし1媒体だけ検証が残っているため、そのまま記載します。</p>
+          <div class="guide-table-wrap">
+            <table class="guide-table">
+              <caption>機能ごとの状態</caption>
+              <thead><tr><th>機能</th><th>状態</th></tr></thead>
+              <tbody>
+                <tr><th>LINE受信 → AI文章生成 → 承認 → 配信</th><td>稼働中・動作確認済み</td></tr>
+                <tr><th>Googleビジネスプロフィールへの投稿</th><td>稼働中・実投稿確認済み</td></tr>
+                <tr><th>Xへの投稿</th><td>稼働中・実投稿確認済み</td></tr>
+                <tr><th>承認画面（スマホ対応・並び替え／除外）</th><td>稼働中</td></tr>
+                <tr><th>Instagramへの投稿</th><td>開発完了。接続確認は未了</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Instagramはシステム側の開発が完了していますが、Meta社の開発者向け管理画面にアクセスできない状態が続いており、最終的な接続確認が取れていません。当社アカウント側に規約違反等がないことは確認済みで、同社へのサポート申請も受理され、現在は先方の対応を待っています。<strong>Instagram以外の機能はすべて正常に稼働しています。</strong></p>
+        </section>
+
+        <section class="guide-section">
+          <h2>導入に必要なもの</h2>
+          <ul>
+            <li>投稿用のLINEグループ（新規作成）</li>
+            <li>各SNSアカウント（Googleビジネスプロフィール・X・Instagram）</li>
+            <li>初期設定と各SNSとの接続作業（こちらで実施します）</li>
+          </ul>
+          <p>サーバー費用、AIの文章生成費用、Xの投稿費用は提供側が負担する構造で設計しています。店舗側が個別にAPI契約を結んだり、追加費用を払ったりする必要はありません。</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>向いている店舗</h2>
+          <ul>
+            <li>施工前後や商品の写真が日常的に発生する店舗（リフォーム、不動産、飲食、美容室など）</li>
+            <li>地域名で検索されたときにマップへ出たい店舗</li>
+            <li>過去にSNS運用を試したが、担当者不在や手間で止まってしまった店舗</li>
+          </ul>
+          <p>写真がほとんど発生しない業種や、すでに専任の担当者が回せている店舗には向きません。まず現在の投稿頻度と、誰が撮っているかを確認したうえで判断します。</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>提供時期と料金</h2>
+          <p>現在は自社で実運用しながら課題を洗い出している段階です。この後、近隣の店舗に無料で提供して実績とフィードバックを集め、改良したうえで有料提供に移ります。</p>
+          <p><strong>月額料金と提供形態は未定です。</strong>自社運用で実際のコストを把握してから確定させる方針のため、現時点で金額を提示することはしていません。先行して試したい店舗があれば、無料提供の段階でご案内します。</p>
+          <p>投稿が続く状態をつくる仕組みであり、集客数や売上を保証するものではありません。</p>
+        </section>
+
+        <div class="guide-cta">
+          <p>「うちの業種でも回るのか」「今の運用のどこを自動化できるのか」という段階のご相談で構いません。現在の投稿頻度と写真の撮られ方を伺ったうえで、向き不向きを率直にお伝えします。</p>
+          <a href="../index.html#contact" class="button primary">システム開発を相談する</a>
+        </div>
+
+        <aside class="guide-related">
+          <h2>関連ページ</h2>
+          <ul>
+            <li><a href="qr-order.html">店舗QR注文システム開発</a></li>
+            <li><a href="lp-production.html">問い合わせ導線LP制作</a></li>
+            <li><a href="../works.html">制作実績</a></li>
+            <li><a href="../guides/index.html">業種別LP制作ガイド</a></li>
+          </ul>
+        </aside>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 株式会社MG ActPraise / DOSEN-DEVELOPER / KAMAKURA — EOF<span class="cursor"></span></p>
+      <a href="../tokushoho.html" class="footer-legal-link">特定商取引法に基づく表記</a>
+      <a href="../privacy.html" class="footer-legal-link">プライバシーポリシー</a>
+    </footer>
+
+    <script src="../analytics.js" defer></script>
+  </body>
+</html>
