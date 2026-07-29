@@ -32,13 +32,23 @@
       film.pause();
     } else {
       film.style.cursor = "pointer";
-      film.addEventListener("click", () => {
+      const toggleFilm = () => {
         if (film.paused) {
           delete film.dataset.userPaused;
           film.play().catch(() => {});
         } else {
           film.dataset.userPaused = "1";
           film.pause();
+        }
+      };
+      film.addEventListener("click", toggleFilm);
+      /* keyboard parity for the click-to-pause affordance (WCAG 2.2.2) */
+      film.setAttribute("tabindex", "0");
+      film.setAttribute("role", "button");
+      film.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleFilm();
         }
       });
       if ("IntersectionObserver" in window) {
