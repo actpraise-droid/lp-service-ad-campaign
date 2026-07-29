@@ -33,7 +33,7 @@
   <text class="j ac" x="76" y="236">現場スタッフ</text>
   <line x1="252" y1="124" x2="252" y2="280" stroke="#c9c9c2" stroke-width="1.5"/>
   <text class="j hd" x="290" y="184">LINEに写真と一言を送る</text>
-  <text class="j dt" x="290" y="236">写真は複数枚可。最後に「完了」と入力</text>
+  <text class="j dt" x="290" y="236">写真は複数枚可。簡単な指示を添えるだけ</text>
   <text class="j dt" x="290" y="276">例：トイレの床張り替え終わりました</text>
 
   <line x1="146" y1="308" x2="146" y2="338" stroke="#0e0e10" stroke-width="1.5"/>
@@ -73,5 +73,5 @@
   <text class="j dt" x="290" y="1044">結果はLINEに返る</text>
 
   <rect x="40" y="1108" width="10" height="26" fill="#cdff00"/>
-  <text class="j" x="64" y="1129" font-size="28" fill="#0e0e10">スタッフの作業は 01 のみ。オーナーは 03 で承認するだけです。</text>
+  <text class="j" x="64" y="1129" font-size="28" fill="#0e0e10">スタッフは 01 で指示を送るだけ。あとはオーナーの承認だけです。</text>
 </svg>
