@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="1000" height="900">
+  <title>5軸100点の採点イメージ。公開中のサンプル診断の実際の数値で、広告とLPの約束一致9点、判断材料の充足11点、Google・AI検索の読み取りやすさ13点、競合との差別化12点、問い合わせのしやすさ13点、合計58点。各軸20点満点</title>
+  <defs>
+    <pattern id="sog2" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .ax { font-size: 32px; fill: #0e0e10; }
+    .sc { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 30px; font-weight: 700; fill: #0e0e10; }
+  </style>
+
+  <rect width="1000" height="900" fill="#ffffff"/>
+  <rect width="1000" height="900" fill="url(#sog2)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/><path d="M969 24h14M976 17v14"/>
+    <path d="M17 876h14M24 869v14"/><path d="M969 876h14M976 869v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">FIVE-AXIS SCORE</text>
+
+  <!-- 総合 -->
+  <rect x="40" y="90" width="920" height="126" fill="#0e0e10"/>
+  <text class="j" x="70" y="134" font-size="24" fill="#b9b9b1">導線の整合度（サンプル診断の実数値）</text>
+  <text class="m" x="70" y="194" font-size="42" font-weight="700" fill="#cdff00">58</text>
+  <text class="m" x="126" y="194" font-size="26" fill="#f1f1ec">/ 100</text>
+  <text class="j" x="930" y="194" font-size="26" fill="#f1f1ec" text-anchor="end">改善余地あり</text>
+
+  <!-- 軸1 -->
+  <text class="j ax" x="40" y="268">広告とLPの約束一致</text>
+  <text class="sc" x="960" y="268" text-anchor="end">9 / 20</text>
+  <rect x="40" y="286" width="920" height="26" fill="#edede8" stroke="#c9c9c2" stroke-width="1"/>
+  <rect x="40" y="286" width="414" height="26" fill="#0e0e10"/>
+
+  <!-- 軸2 -->
+  <text class="j ax" x="40" y="378">判断材料の充足</text>
+  <text class="sc" x="960" y="378" text-anchor="end">11 / 20</text>
+  <rect x="40" y="396" width="920" height="26" fill="#edede8" stroke="#c9c9c2" stroke-width="1"/>
+  <rect x="40" y="396" width="506" height="26" fill="#0e0e10"/>
+
+  <!-- 軸3 -->
+  <text class="j ax" x="40" y="488">Google・AI検索の読み取りやすさ</text>
+  <text class="sc" x="960" y="488" text-anchor="end">13 / 20</text>
+  <rect x="40" y="506" width="920" height="26" fill="#edede8" stroke="#c9c9c2" stroke-width="1"/>
+  <rect x="40" y="506" width="598" height="26" fill="#0e0e10"/>
+
+  <!-- 軸4 -->
+  <text class="j ax" x="40" y="598">競合との差別化</text>
+  <text class="sc" x="960" y="598" text-anchor="end">12 / 20</text>
+  <rect x="40" y="616" width="920" height="26" fill="#edede8" stroke="#c9c9c2" stroke-width="1"/>
+  <rect x="40" y="616" width="552" height="26" fill="#0e0e10"/>
+
+  <!-- 軸5 -->
+  <text class="j ax" x="40" y="708">問い合わせのしやすさ</text>
+  <text class="sc" x="960" y="708" text-anchor="end">13 / 20</text>
+  <rect x="40" y="726" width="920" height="26" fill="#edede8" stroke="#c9c9c2" stroke-width="1"/>
+  <rect x="40" y="726" width="598" height="26" fill="#0e0e10"/>
+
+  <rect x="40" y="800" width="10" height="26" fill="#cdff00"/>
+  <text class="j" x="64" y="821" font-size="26" fill="#0e0e10">点数は成果予測ではなく、情報が足りているかの比較指標です。</text>
+
+  <text class="j" x="40" y="866" font-size="22" fill="#55554f">※ 数値は公開中のサンプル診断（架空の外壁塗装会社）の実際の採点です。</text>
+</svg>

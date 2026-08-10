@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 860" width="1000" height="860">
+  <title>無料診断と有料の第三者診断の違いを左右に分けた比較図。無料は所要15〜30分で指摘が数点、提案書は残らず、目的は診断した会社自身の受注。有料は公開情報を全項目確認し、5軸100点で採点し、修正文案まで納品され、他社にそのまま渡せる資料が残る</title>
+  <defs>
+    <pattern id="sog1" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .hd { font-weight: 700; font-size: 28px; fill: #f1f1ec; }
+    .it { font-size: 30px; fill: #0e0e10; }
+    .sb { font-size: 22px; fill: #55554f; }
+  </style>
+
+  <rect width="1000" height="860" fill="#ffffff"/>
+  <rect width="1000" height="860" fill="url(#sog1)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/><path d="M969 24h14M976 17v14"/>
+    <path d="M17 836h14M24 829v14"/><path d="M969 836h14M976 829v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">FREE CHECK vs PAID SECOND OPINION</text>
+
+  <!-- 左：無料診断 -->
+  <rect x="40" y="96" width="450" height="64" fill="#55554f"/>
+  <text class="j hd" x="66" y="137">よくある「無料診断」</text>
+  <rect x="40" y="160" width="450" height="500" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+
+  <rect x="66" y="210" width="20" height="20" fill="#ffffff" stroke="#c9c9c2" stroke-width="2"/>
+  <text class="j it" x="100" y="232">所要 15〜30分</text>
+  <text class="j sb" x="100" y="272">画面を一緒に見ながら口頭で</text>
+
+  <rect x="66" y="300" width="20" height="20" fill="#ffffff" stroke="#c9c9c2" stroke-width="2"/>
+  <text class="j it" x="100" y="322">指摘は数点まで</text>
+  <text class="j sb" x="100" y="362">目立つ箇所だけを拾う</text>
+
+  <rect x="66" y="390" width="20" height="20" fill="#ffffff" stroke="#c9c9c2" stroke-width="2"/>
+  <text class="j it" x="100" y="412">資料は残らない</text>
+  <text class="j sb" x="100" y="452">後から見返せない</text>
+
+  <rect x="66" y="480" width="20" height="20" fill="#ffffff" stroke="#c9c9c2" stroke-width="2"/>
+  <text class="j it" x="100" y="502">目的は自社の受注</text>
+  <text class="j sb" x="100" y="542">提案の中立性は担保されない</text>
+
+  <rect x="66" y="590" width="8" height="26" fill="#c1210f"/>
+  <text class="j" x="88" y="611" font-size="24" fill="#0e0e10">実態は営業の入口</text>
+
+  <line x1="500" y1="96" x2="500" y2="660" stroke="#c9c9c2" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- 右：有料の第三者診断 -->
+  <rect x="510" y="96" width="450" height="64" fill="#0e0e10"/>
+  <text class="j hd" x="536" y="137">有料の第三者診断</text>
+  <rect x="510" y="160" width="450" height="500" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+
+  <rect x="536" y="210" width="20" height="20" fill="#0e0e10"/>
+  <text class="j it" x="570" y="232">公開情報を全項目</text>
+  <text class="j sb" x="570" y="272">同じ基準で最後まで確認</text>
+
+  <rect x="536" y="300" width="20" height="20" fill="#0e0e10"/>
+  <text class="j it" x="570" y="322">5軸100点で採点</text>
+  <text class="j sb" x="570" y="362">点数の根拠も文章で記載</text>
+
+  <rect x="536" y="390" width="20" height="20" fill="#0e0e10"/>
+  <text class="j it" x="570" y="412">修正文案まで納品</text>
+  <text class="j sb" x="570" y="452">直す文章をそのまま渡せる</text>
+
+  <rect x="536" y="480" width="20" height="20" fill="#0e0e10"/>
+  <text class="j it" x="570" y="502">受注が前提ではない</text>
+  <text class="j sb" x="570" y="542">既存の制作会社へ渡して構わない</text>
+
+  <rect x="536" y="590" width="8" height="26" fill="#cdff00"/>
+  <text class="j" x="558" y="611" font-size="24" fill="#0e0e10">他社に渡せる判断材料</text>
+
+  <rect x="40" y="700" width="920" height="80" fill="#cdff00" stroke="#0e0e10" stroke-width="2"/>
+  <text class="j" x="500" y="748" font-size="30" font-weight="700" fill="#0e0e10" text-anchor="middle">診断した会社に発注しなくても構いません</text>
+
+  <text class="j" x="40" y="822" font-size="22" fill="#55554f">※ 無料診断そのものを否定するものではありません。目的が違います。</text>
+</svg>

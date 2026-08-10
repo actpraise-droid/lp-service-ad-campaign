@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 780" width="1000" height="780">
+  <title>診断料が制作費に充当される仕組みの図。まず診断を50,000円で依頼し、レポート納品後30日以内に制作を発注した場合は診断料50,000円が全額制作費に充当され、150,000円のLP制作なら差額100,000円の負担になる。診断だけで終えても構わない</title>
+  <defs>
+    <pattern id="sog3" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .hd { font-weight: 700; font-size: 36px; fill: #0e0e10; }
+    .dt { font-size: 26px; fill: #55554f; }
+    .no { font-family: ui-monospace, Consolas, monospace; font-weight: 700; font-size: 52px; fill: #0e0e10; }
+  </style>
+
+  <rect width="1000" height="780" fill="#ffffff"/>
+  <rect width="1000" height="780" fill="url(#sog3)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/><path d="M969 24h14M976 17v14"/>
+    <path d="M17 756h14M24 749v14"/><path d="M969 756h14M976 749v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">DIAGNOSIS FEE CREDITED TO PRODUCTION</text>
+
+  <!-- STEP 01 -->
+  <rect x="40" y="96" width="920" height="150" fill="#ffffff" stroke="#0e0e10" stroke-width="2"/>
+  <rect x="40" y="96" width="10" height="150" fill="#cdff00"/>
+  <text class="m no" x="76" y="166">01</text>
+  <line x1="200" y1="120" x2="200" y2="222" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="238" y="160">診断を依頼する</text>
+  <text class="j dt" x="238" y="204">50,000円（税別）／ 対象は1URL</text>
+
+  <line x1="120" y1="246" x2="120" y2="276" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 276h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- STEP 02 -->
+  <rect x="40" y="290" width="920" height="150" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="360">02</text>
+  <line x1="200" y1="314" x2="200" y2="416" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="238" y="354">レポートを受け取る</text>
+  <text class="j dt" x="238" y="398">ここで終えても構いません</text>
+
+  <line x1="120" y1="440" x2="120" y2="470" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 470h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- STEP 03 -->
+  <rect x="40" y="484" width="920" height="150" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="554">03</text>
+  <line x1="200" y1="508" x2="200" y2="610" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="238" y="548">30日以内に制作を発注した場合</text>
+  <text class="j dt" x="238" y="592">診断料 50,000円 を全額 制作費に充当</text>
+
+  <rect x="40" y="668" width="920" height="80" fill="#cdff00" stroke="#0e0e10" stroke-width="2"/>
+  <text class="j" x="500" y="716" font-size="30" font-weight="700" fill="#0e0e10" text-anchor="middle">LP制作 150,000円 の場合 差額 100,000円</text>
+</svg>
