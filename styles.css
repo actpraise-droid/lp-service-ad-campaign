@@ -2829,6 +2829,29 @@ html.js .contact-section .lit .mark {
   display: inline-flex;
 }
 
+.guide-author {
+  margin-top: 48px;
+  padding: 22px 24px;
+  background: var(--paper-card);
+  border: 1px solid var(--line-p);
+  border-left: 3px solid var(--ink-p);
+}
+
+.guide-author p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted-p);
+}
+
+.guide-author p + p {
+  margin-top: 8px;
+}
+
+.guide-author strong {
+  color: var(--ink-p);
+}
+
 .guide-related {
   margin-top: 56px;
   padding-top: 32px;
