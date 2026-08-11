@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" width="1000" height="1200">
+  <title>相談から運用までの流れ。01 無料相談15分、02 対象になり得る施策の棚卸し、03 Web/DX導線チェック50,000円税別、04 制作としてLP・HP150,000円から、予約・見積・顧客管理の連携つき300,000円から、05 改善運用が月額30,000円から。途中で終えてもよく、01と02だけの利用も可能</title>
+  <defs>
+    <pattern id="subg2" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0e0e10" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .m { font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .j { font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; }
+    .hd { font-weight: 700; font-size: 36px; fill: #0e0e10; }
+    .dt { font-size: 26px; fill: #55554f; }
+    .no { font-family: ui-monospace, Consolas, monospace; font-weight: 700; font-size: 52px; fill: #0e0e10; }
+  </style>
+
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <rect width="1000" height="1200" fill="url(#subg2)"/>
+
+  <g stroke="#0e0e10" stroke-opacity="0.55" stroke-width="1.5">
+    <path d="M17 24h14M24 17v14"/><path d="M969 24h14M976 17v14"/>
+    <path d="M17 1176h14M24 1169v14"/><path d="M969 1176h14M976 1169v14"/>
+  </g>
+
+  <text class="m" x="40" y="60" font-size="22" fill="#55554f" letter-spacing="0.12em">FROM CONSULTATION TO OPERATION</text>
+
+  <!-- 01 -->
+  <rect x="40" y="96" width="920" height="168" fill="#ffffff" stroke="#0e0e10" stroke-width="2"/>
+  <rect x="40" y="96" width="10" height="168" fill="#cdff00"/>
+  <text class="m no" x="76" y="176">01</text>
+  <line x1="230" y1="122" x2="230" y2="238" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="268" y="172">無料相談（15分）</text>
+  <text class="j dt" x="268" y="214">いまの困りごとと、やりたいことを伺います</text>
+  <line x1="120" y1="264" x2="120" y2="294" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 294h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- 02 -->
+  <rect x="40" y="308" width="920" height="168" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="388">02</text>
+  <line x1="230" y1="334" x2="230" y2="450" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="268" y="384">施策の棚卸し</text>
+  <text class="j dt" x="268" y="426">対象になり得る施策を候補として整理します</text>
+  <line x1="120" y1="476" x2="120" y2="506" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 506h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- 03 -->
+  <rect x="40" y="520" width="920" height="168" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="600">03</text>
+  <line x1="230" y1="546" x2="230" y2="662" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="268" y="596">Web/DX導線チェック</text>
+  <text class="j dt" x="268" y="638">50,000円（税別）／5軸で採点し改善案を出します</text>
+  <line x1="120" y1="688" x2="120" y2="718" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 718h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- 04 -->
+  <rect x="40" y="732" width="920" height="168" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="812">04</text>
+  <line x1="230" y1="758" x2="230" y2="874" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="268" y="800">制作</text>
+  <text class="j dt" x="268" y="842">LP・HP制作 150,000円から</text>
+  <text class="j dt" x="268" y="878">予約・見積・顧客管理の連携つき 300,000円から</text>
+  <line x1="120" y1="900" x2="120" y2="930" stroke="#0e0e10" stroke-width="1.5"/>
+  <path d="M112 930h16l-8 14z" fill="#0e0e10"/>
+
+  <!-- 05 -->
+  <rect x="40" y="944" width="920" height="168" fill="#ffffff" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="m no" x="76" y="1024">05</text>
+  <line x1="230" y1="970" x2="230" y2="1086" stroke="#c9c9c2" stroke-width="1.5"/>
+  <text class="j hd" x="268" y="1020">改善運用</text>
+  <text class="j dt" x="268" y="1062">月額 30,000円から／公開後の数値を見て直します</text>
+
+  <rect x="40" y="1140" width="10" height="26" fill="#cdff00"/>
+  <text class="j" x="64" y="1161" font-size="26" fill="#0e0e10">途中で終えても構いません。01と02だけのご利用も可能です。</text>
+</svg>
