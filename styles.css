@@ -80,6 +80,7 @@ a {
 img,
 video {
   max-width: 100%;
+  height: auto;
 }
 
 /* ---------- edge rulers ---------- */
@@ -1083,6 +1084,29 @@ html:not(.js) .scan {
 
 .manga-card img {
   background: white;
+}
+
+/* 4コマを横に並べたままだと、狭い画面で1コマが読めない幅まで縮む。
+   コマの高さを確保して、枠の中だけを横スクロールさせる。 */
+@media (max-width: 900px) {
+  .manga-card .plate-frame {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .manga-card .plate-frame img {
+    width: auto;
+    max-width: none;
+    height: min(58vh, 460px);
+  }
+
+  .manga-card .fig-cap::after {
+    content: "← 横にスワイプすると4コマすべて読めます";
+    display: block;
+    margin-top: 8px;
+    color: var(--accent);
+  }
 }
 
 /* ---------- showcase ---------- */
