@@ -100,8 +100,8 @@
         src: "assets/campaign-film-vertical.mp4",
         poster: "assets/campaign-vertical-poster.jpg",
         ratio: "9-16",
-        cap: "FIG.02 — SNS CUT / 9:16 / LOOP",
-        alt: "同じ素材から切り出した縦型の短尺版(クリックで一時停止)",
+        cap: "FIG.02 — SNS CUT / 9:16 / 8s",
+        alt: "「ホームページはある。でも問い合わせが来ない」をテーマにした縦型短尺。テロップ入り(クリックで一時停止)",
       },
       story: {
         title: "「なぜこの見せ方なのか」を、制作の過程ごと見せる。",
