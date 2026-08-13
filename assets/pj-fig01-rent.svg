@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1330" viewBox="0 0 1200 1330" role="img"
+     aria-label="やさしい日本語と図解で説明した、日本で部屋を借りるまでの4つの手順。1 へやを さがす。2 へやを みる。3 もうしこみを する。4 おかねを はらう。4では敷金・礼金・仲介手数料・最初の家賃の内訳と、合計で家賃の4から6か月分ほどかかることを示している。">
+  <defs>
+    <style>
+      .f  { font-family: "Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif; }
+      .h1 { font-size: 50px; font-weight: 700; fill: #0e0e10; }
+      .sub{ font-size: 24px; font-weight: 500; fill: #55554f; }
+      .lbl{ font-size: 19px; font-weight: 700; fill: #55554f; letter-spacing: 0.16em; }
+      .ttl{ font-size: 40px; font-weight: 700; fill: #0e0e10; }
+      .bdy{ font-size: 25px; font-weight: 500; fill: #26262b; }
+      .tip{ font-size: 23px; font-weight: 700; fill: #0e0e10; }
+      .tipb{font-size: 23px; font-weight: 500; fill: #3a3a36; }
+      .cst{ font-size: 23px; font-weight: 500; fill: #26262b; }
+      .cstn{font-size: 23px; font-weight: 700; fill: #0e0e10; }
+      .numL{font-size: 30px; font-weight: 700; fill: #edede8; }
+      .numD{font-size: 30px; font-weight: 700; fill: #0e0e10; }
+      .totL{font-size: 24px; font-weight: 700; fill: #edede8; }
+      .totA{font-size: 24px; font-weight: 700; fill: #cdff00; }
+      .totN{font-size: 20px; font-weight: 500; fill: #b9b9b1; }
+      .foot{font-size: 21px; font-weight: 500; fill: #55554f; }
+      .footb{font-size: 21px; font-weight: 700; fill: #0e0e10; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1330" fill="#edede8"/>
+
+  <!-- ===== header ===== -->
+  <rect x="48" y="52" width="10" height="52" fill="#cdff00"/>
+  <text class="f h1"  x="76" y="94">にほんで へやを かりる</text>
+  <text class="f sub" x="76" y="134">日本(にほん)で 部屋(へや)を 借(か)りる ときの ながれ</text>
+  <text class="f lbl" x="1152" y="94" text-anchor="end">SAMPLE</text>
+  <line x1="48" y1="166" x2="1152" y2="166" stroke="#c9c9c2" stroke-width="1"/>
+
+  <!-- ===== PANEL 1 ===== -->
+  <g transform="translate(48,196)">
+    <rect width="528" height="486" fill="#ffffff" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="0" y="0" width="64" height="52" fill="#0e0e10"/>
+    <text class="f numL" x="32" y="36" text-anchor="middle">1</text>
+    <text class="f ttl"  x="86" y="38">へやを さがす</text>
+
+    <g transform="translate(0,74)">
+      <rect x="30" y="10" width="468" height="176" fill="#f6f6f2" stroke="#e2e2dc" stroke-width="1"/>
+      <rect x="322" y="44" width="132" height="126" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <rect x="344" y="66"  width="30" height="30" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <rect x="402" y="66"  width="30" height="30" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <rect x="344" y="114" width="30" height="30" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <rect x="402" y="114" width="30" height="30" fill="#cdff00" stroke="#0e0e10" stroke-width="2"/>
+      <circle cx="128" cy="72" r="26" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <circle cx="119" cy="69" r="3.2" fill="#0e0e10"/>
+      <circle cx="137" cy="69" r="3.2" fill="#0e0e10"/>
+      <path d="M120 82 q8 7 16 0" stroke="#0e0e10" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M96 170 q0 -60 32 -60 q32 0 32 60 z" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <path d="M186 156 l30 -52 h74 l-8 52 z" fill="#ffffff" stroke="#0e0e10" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M196 150 l22 -40 h60 l-6 40 z" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <rect x="176" y="156" width="122" height="10" rx="3" fill="#0e0e10"/>
+    </g>
+
+    <text class="f bdy" x="30" y="314">インターネットや ふどうさんの</text>
+    <text class="f bdy" x="30" y="350">おみせで へやを さがします。</text>
+
+    <rect x="30" y="382" width="468" height="76" fill="#f2f2ec" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="30" y="382" width="4"   height="76" fill="#0e0e10"/>
+    <text class="f tip"  x="52" y="414">やちん（家賃）</text>
+    <text class="f tipb" x="52" y="444">= まいつき はらう おかね</text>
+  </g>
+
+  <!-- ===== PANEL 2 ===== -->
+  <g transform="translate(624,196)">
+    <rect width="528" height="486" fill="#ffffff" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="0" y="0" width="64" height="52" fill="#0e0e10"/>
+    <text class="f numL" x="32" y="36" text-anchor="middle">2</text>
+    <text class="f ttl"  x="86" y="38">へやを みる</text>
+
+    <g transform="translate(0,74)">
+      <rect x="30" y="10" width="468" height="176" fill="#f6f6f2" stroke="#e2e2dc" stroke-width="1"/>
+      <rect x="256" y="34" width="200" height="142" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <rect x="286" y="60" width="66" height="54" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <line x1="319" y1="60" x2="319" y2="114" stroke="#0e0e10" stroke-width="2"/>
+      <rect x="382" y="118" width="52" height="58" fill="#e8e8e2" stroke="#0e0e10" stroke-width="2"/>
+      <circle cx="112" cy="72" r="25" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <circle cx="104" cy="69" r="3.2" fill="#0e0e10"/>
+      <circle cx="121" cy="69" r="3.2" fill="#0e0e10"/>
+      <path d="M104 82 q8 7 16 0" stroke="#0e0e10" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M81 176 q0 -58 31 -58 q31 0 31 58 z" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <circle cx="188" cy="80" r="23" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <circle cx="181" cy="77" r="3" fill="#0e0e10"/>
+      <circle cx="196" cy="77" r="3" fill="#0e0e10"/>
+      <path d="M181 90 q7 6 14 0" stroke="#0e0e10" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M159 176 q0 -54 29 -54 q29 0 29 54 z" fill="#f2f2ec" stroke="#0e0e10" stroke-width="3"/>
+      <path d="M214 128 l32 -8" stroke="#0e0e10" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <text class="f bdy" x="30" y="314">じっさいに へやを みに いきます。</text>
+    <text class="f bdy" x="30" y="350">みるだけなら おかねは いりません。</text>
+
+    <rect x="30" y="382" width="468" height="76" fill="#f2f2ec" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="30" y="382" width="4"   height="76" fill="#0e0e10"/>
+    <text class="f tip"  x="52" y="414">ないけん（内見）</text>
+    <text class="f tipb" x="52" y="444">= へやを みに いくこと</text>
+  </g>
+
+  <!-- ===== PANEL 3 ===== -->
+  <g transform="translate(48,722)">
+    <rect width="528" height="486" fill="#ffffff" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="0" y="0" width="64" height="52" fill="#0e0e10"/>
+    <text class="f numL" x="32" y="36" text-anchor="middle">3</text>
+    <text class="f ttl"  x="86" y="38">もうしこみを する</text>
+
+    <g transform="translate(0,74)">
+      <rect x="30" y="10" width="468" height="176" fill="#f6f6f2" stroke="#e2e2dc" stroke-width="1"/>
+      <rect x="176" y="30" width="146" height="146" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <line x1="200" y1="62"  x2="298" y2="62"  stroke="#0e0e10" stroke-width="3" stroke-linecap="round"/>
+      <line x1="200" y1="90"  x2="298" y2="90"  stroke="#c9c9c2" stroke-width="3" stroke-linecap="round"/>
+      <line x1="200" y1="114" x2="298" y2="114" stroke="#c9c9c2" stroke-width="3" stroke-linecap="round"/>
+      <line x1="200" y1="138" x2="262" y2="138" stroke="#c9c9c2" stroke-width="3" stroke-linecap="round"/>
+      <path d="M330 150 l52 -52 l16 16 l-52 52 l-22 6 z" fill="#ffffff" stroke="#0e0e10" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="96" cy="104" r="42" fill="#ffffff" stroke="#0e0e10" stroke-width="3"/>
+      <line x1="96" y1="104" x2="96"  y2="78"  stroke="#0e0e10" stroke-width="3.4" stroke-linecap="round"/>
+      <line x1="96" y1="104" x2="116" y2="112" stroke="#0e0e10" stroke-width="3.4" stroke-linecap="round"/>
+      <circle cx="96" cy="104" r="4" fill="#0e0e10"/>
+    </g>
+
+    <text class="f bdy" x="30" y="314">かみに なまえなどを かきます。</text>
+    <text class="f bdy" x="30" y="350">かいしゃが しらべます。</text>
+    <text class="f bdy" x="30" y="386">1しゅうかん ぐらい かかります。</text>
+
+    <rect x="30" y="410" width="468" height="48" fill="#f2f2ec" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="30" y="410" width="4"   height="48" fill="#0e0e10"/>
+    <text class="f tipb" x="52" y="441">ざいりゅうカードが いります。</text>
+  </g>
+
+  <!-- ===== PANEL 4 ===== -->
+  <g transform="translate(624,722)">
+    <rect width="528" height="486" fill="#ffffff" stroke="#c9c9c2" stroke-width="1"/>
+    <rect x="0" y="0" width="64" height="52" fill="#cdff00"/>
+    <text class="f numD" x="32" y="36" text-anchor="middle">4</text>
+    <text class="f ttl"  x="86" y="38">おかねを はらう</text>
+
+    <text class="f bdy" x="30" y="100">けいやくの ときに はらう</text>
+    <text class="f bdy" x="30" y="136">おかねは とても おおいです。</text>
+
+    <!-- breakdown -->
+    <rect x="16" y="162" width="496" height="220" fill="#f6f6f2" stroke="#c9c9c2" stroke-width="1"/>
+    <text class="f lbl" x="476" y="194" text-anchor="end">やちんの なんかげつぶん</text>
+    <line x1="36" y1="206" x2="476" y2="206" stroke="#c9c9c2" stroke-width="1"/>
+    <text class="f cst"  x="36"  y="240">しききん（敷金）</text>
+    <text class="f cstn" x="476" y="240" text-anchor="end">1〜2かげつ</text>
+    <line x1="36" y1="254" x2="476" y2="254" stroke="#e2e2dc" stroke-width="1"/>
+    <text class="f cst"  x="36"  y="278">れいきん（礼金）</text>
+    <text class="f cstn" x="476" y="278" text-anchor="end">0〜2かげつ</text>
+    <line x1="36" y1="292" x2="476" y2="292" stroke="#e2e2dc" stroke-width="1"/>
+    <text class="f cst"  x="36"  y="316">ちゅうかいてすうりょう</text>
+    <text class="f cstn" x="476" y="316" text-anchor="end">0.5〜1かげつ</text>
+    <line x1="36" y1="330" x2="476" y2="330" stroke="#e2e2dc" stroke-width="1"/>
+    <text class="f cst"  x="36"  y="354">さいしょの やちん</text>
+    <text class="f cstn" x="476" y="354" text-anchor="end">1かげつ</text>
+
+    <!-- total -->
+    <rect x="16" y="396" width="496" height="76" fill="#0e0e10"/>
+    <text class="f totL" x="36"  y="430">ぜんぶで</text>
+    <text class="f totA" x="492" y="430" text-anchor="end">やちんの 4〜6かげつぶん</text>
+    <text class="f totN" x="36"  y="458">※ へやに よって ちがいます</text>
+  </g>
+
+  <!-- ===== footer ===== -->
+  <line x1="48" y1="1248" x2="1152" y2="1248" stroke="#c9c9c2" stroke-width="1"/>
+  <text class="f foot"  x="48"   y="1284">やさしい日本語＋図解の サンプルです。</text>
+  <text class="f foot"  x="48"   y="1312">金額は めやすです。実際の契約とは ちがいます。</text>
+  <text class="f footb" x="1152" y="1284" text-anchor="end">導線デベロッパー</text>
+  <text class="f foot"  x="1152" y="1312" text-anchor="end">dosen-lab.co.jp</text>
+</svg>
