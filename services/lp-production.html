@@ -41,7 +41,127 @@
       "provider": {"@id": "https://dosen-lab.co.jp/#organization"},
       "areaServed": "JP",
       "url": "https://dosen-lab.co.jp/services/lp-production.html",
-      "description": "顧客心理の整理、構成、コピー、デザイン、実装、公開前QAまで一貫して行うLP制作サービス。"
+      "description": "顧客心理の整理、構成、コピー、デザイン、実装、公開前QAまで一貫して行うLP制作サービス。",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "導線LP制作",
+          "priceCurrency": "JPY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "150000",
+            "priceCurrency": "JPY",
+            "valueAddedTaxIncluded": false
+          },
+          "description": "150,000円(税別)。構成設計、原稿編集、修正2回、デザイン・実装、公開前QA、GA4の計測設定を含みます。正式発注・素材提出・着手金の入金確認後10営業日。撮影、広告運用、外部システム連携、成果保証は含みません。",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dosen-lab.co.jp/services/lp-production.html#price"
+        },
+        {
+          "@type": "Offer",
+          "name": "動画・漫画つきLP",
+          "priceCurrency": "JPY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "300000",
+            "priceCurrency": "JPY",
+            "valueAddedTaxIncluded": false
+          },
+          "description": "300,000円(税別)から。金額は下限で、素材量により個別見積となります。導線LP制作の範囲に加えて動画・漫画・図解の制作を含みます。",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dosen-lab.co.jp/services/lp-production.html#price"
+        },
+        {
+          "@type": "Offer",
+          "name": "改善運用",
+          "priceCurrency": "JPY",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "minPrice": "30000",
+            "priceCurrency": "JPY",
+            "valueAddedTaxIncluded": false,
+            "unitCode": "DAY",
+            "billingDuration": 30,
+            "billingIncrement": 1
+          },
+          "description": "月額30,000円(税別)から。一括ではなく開始日から30日単位の継続課金です。公開後の数値確認、改善提案、軽微な修正を含みます。広告費、広告運用代行、成果保証は含みません。",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dosen-lab.co.jp/services/lp-production.html#price"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://dosen-lab.co.jp/services/lp-production.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "「10営業日」という納期は、いつから数えますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "正式発注、素材のご提出、着手金のご入金の3つが確認できた時点から数えて10営業日が標準です。素材のご提出が遅れた場合は、起算日もその分だけ後ろになります。同時進行の件数によっては着手日を調整させていただくことがあります。予定納期は発注・入金の前にお伝えし、ご合意いただいてから受け付けます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "修正は何回まで含まれますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "導線LP制作150,000円(税別)には、原稿編集と修正2回が含まれます。この範囲を超える修正や、着手後に目的・素材・公開方法が変わる場合は、個別にお見積りします。個別見積が必要な作業は、発注前に金額を書面またはメールでお示しします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "既存のホームページがあります。作り直しになりますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "作り直すとは限りません。既存サイト、SNS、広告、問い合わせ方法を確認したうえで判断します。既存サイトの構成、問い合わせフォーム、CTAの見直しで対応できる場合もあります。初回相談では、作るべきLPか、診断から始めるべきか、今は作らない方がよいかを整理します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "表現が薬機法や景品表示法に触れないかも見てもらえますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "適法かどうかの判断は行いません。初回相談で、成果保証、誇大表現、業法規制、採用条件の記載など、公開前に確認すべき表現を洗い出します。公開前QAでは、表示・速度・リンク・フォーム・計測とあわせてリスク表現を確認します。気づいた点はお伝えしますが、最終判断は専門家にご確認ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "打ち合わせは対面でもできますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "全国オンラインで完結できます。神奈川県・東京都は訪問でのご相談にも対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "担当者は何名ですか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1名です。企画から実装・公開まで同一人物が担当します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "発注したあとにキャンセルする場合、費用はどうなりますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "役務・デジタル納品物という性質上、納品後の返品はお受けできません。制作途中でのキャンセルは、進行状況に応じて個別見積書・発注書の条件に基づき精算します。当社の都合で提供できなくなった場合は、未提供分を返金します。条件は特定商取引法に基づく表記に記載しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支払いはいつ、どの方法で行いますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "お支払いは銀行振込です。LP制作は発注時に50%、残金は個別見積書・発注書に記載した期日までにお願いしています。消費税と振込手数料は、お客様のご負担となります。着手金のご入金を確認してから制作に入るため、入金日が納期の起算点のひとつになります。"
+          }
+        }
+      ]
     }
     </script>
     <script type="application/ld+json">
@@ -160,7 +280,7 @@
                 <tr>
                   <th>導線LP制作</th>
                   <td>150,000円</td>
-                  <td>構成設計、原稿編集、デザイン・実装、公開前QA、GA4の計測設定</td>
+                  <td>構成設計、原稿編集、修正2回、デザイン・実装、公開前QA、GA4の計測設定</td>
                   <td>撮影、広告運用、外部システム連携、成果保証</td>
                   <td>正式発注・素材提出・着手金の入金確認後 10営業日</td>
                 </tr>
@@ -185,6 +305,30 @@
           <p>広告費や問い合わせ数そのものを保証するサービスではありません。流入した人が内容を理解し、迷わず次の行動を選べる状態を作ることが制作の目的です。</p>
         </section>
 
+        <section class="guide-section" id="not-fit">
+          <h2>向いていない場合</h2>
+          <p class="guide-answer">先に書いておきます。次に当てはまる場合は、他社をあたっていただいた方が早いです。</p>
+          <ul>
+            <li><strong>保証を条件に発注先を選びたい：</strong>問い合わせ数、CPA、検索順位のいずれも保証しません。</li>
+            <li><strong>広告アカウントの運用まで任せたい：</strong>広告アカウントの運用代行は行いません。広告費のお預かりや入札操作も行いません。</li>
+            <li><strong>大規模ECサイト・会員基盤を伴う開発：</strong>請けていません。対象は、1つの行動を分かりやすく案内するLPです。</li>
+            <li><strong>掲載内容の適法性判断まで任せたい：</strong>法務判断や、薬機法・景表法の適法性判断はしません。気づいた表現リスクは指摘しますが、最終判断は専門家にご確認ください。</li>
+            <li><strong>撮影や外部システム連携が前提：</strong>どちらも導線LP制作の範囲には含まれません。必要な場合は範囲が変わります。</li>
+          </ul>
+        </section>
+
+        <section class="guide-section" id="cases">
+          <h2>公開中の制作事例</h2>
+          <p class="guide-answer">同じ「1ページ」でも、緊急性の高い依頼と、稟議を通す依頼では構成が変わります。実際に制作したページを、設計の意図とあわせて公開しています。数値ではなく、企画・構成・実装の内容をご確認ください。</p>
+          <ul>
+            <li><strong><a href="../works.html#case-08">INTENSE株式会社（給湯器）｜緊急対応LP</a>：</strong>故障は比較検討にかけられる時間が短いという前提で構成しました。ファーストビューで最短即日と対応エリアを示し、見積り無料・機器＋工事費込みの明朗価格・メーカー正規品・工事保証の4点で不安を先に潰しています。電話とフォームを同列に置き、急ぐ人と検討したい人の両方を受けられるようにしました。</li>
+            <li><strong><a href="../works.html#case-09">INTENSE株式会社（法人向け）｜BtoB LP</a>：</strong>上と同じ会社ですが、顧客も判断基準も異なるため訴求を作り分けています。早朝・深夜・定休日対応、複数店舗・複数台の一括管理、請求書払いといった法人特有の条件を前面に出し、稟議に必要な情報を先に示す構成にしました。</li>
+            <li><strong><a href="../works.html#case-02">WAVE Song Gift｜デモ重視LP</a>：</strong>言葉だけでは完成像が伝わりにくい新サービスのため、実際のデモ曲とMVを中心に据えました。用途・制作の流れ・料金・権利の注意点・相談導線までを一つのストーリーにまとめています。</li>
+            <li><strong><a href="../works.html#case-06">株式会社MGAP｜症状別導線</a>：</strong>相談する側は工事の名前を知らないことが多いため、サービス分類より手前に「よくあるお困りごと」を置き、症状から該当ページへ入れる導線にしました。連絡手段は電話・LINE・フォームの3系統です。</li>
+          </ul>
+          <p>掲載条件によりリンクを掲載していない事例もあります。全9件は<a href="../works.html" data-analytics-event="works_view">制作実績</a>にまとめています。</p>
+        </section>
+
         <section class="guide-section" id="before">
           <h2>制作を依頼する前に確認したいこと</h2>
           <ol>
@@ -195,6 +339,45 @@
           </ol>
         </section>
 
+        <section class="guide-section" id="faq">
+          <h2>よくある質問</h2>
+          <dl class="guide-faq">
+            <div>
+              <dt>「10営業日」という納期は、いつから数えますか。</dt>
+              <dd>正式発注、素材のご提出、着手金のご入金の3つが確認できた時点から数えて10営業日が標準です。素材のご提出が遅れた場合は、起算日もその分だけ後ろになります。同時進行の件数によっては着手日を調整させていただくことがあります。予定納期は発注・入金の前にお伝えし、ご合意いただいてから受け付けます。</dd>
+            </div>
+            <div>
+              <dt>修正は何回まで含まれますか。</dt>
+              <dd>導線LP制作150,000円(税別)には、原稿編集と修正2回が含まれます。この範囲を超える修正や、着手後に目的・素材・公開方法が変わる場合は、個別にお見積りします。個別見積が必要な作業は、発注前に金額を書面またはメールでお示しします。</dd>
+            </div>
+            <div>
+              <dt>既存のホームページがあります。作り直しになりますか。</dt>
+              <dd>作り直すとは限りません。既存サイト、SNS、広告、問い合わせ方法を確認したうえで判断します。既存サイトの構成、問い合わせフォーム、CTAの見直しで対応できる場合もあります。初回相談では、作るべきLPか、診断から始めるべきか、今は作らない方がよいかを整理します。</dd>
+            </div>
+            <div>
+              <dt>表現が薬機法や景品表示法に触れないかも見てもらえますか。</dt>
+              <dd>適法かどうかの判断は行いません。初回相談で、成果保証、誇大表現、業法規制、採用条件の記載など、公開前に確認すべき表現を洗い出します。公開前QAでは、表示・速度・リンク・フォーム・計測とあわせてリスク表現を確認します。気づいた点はお伝えしますが、最終判断は専門家にご確認ください。</dd>
+            </div>
+            <div>
+              <dt>打ち合わせは対面でもできますか。</dt>
+              <dd>全国オンラインで完結できます。神奈川県・東京都は訪問でのご相談にも対応しています。</dd>
+            </div>
+            <div>
+              <dt>担当者は何名ですか。</dt>
+              <dd>1名です。企画から実装・公開まで同一人物が担当します。</dd>
+            </div>
+            <div>
+              <dt>発注したあとにキャンセルする場合、費用はどうなりますか。</dt>
+              <dd>役務・デジタル納品物という性質上、納品後の返品はお受けできません。制作途中でのキャンセルは、進行状況に応じて個別見積書・発注書の条件に基づき精算します。当社の都合で提供できなくなった場合は、未提供分を返金します。条件は<a href="../tokushoho.html">特定商取引法に基づく表記</a>に記載しています。</dd>
+            </div>
+            <div>
+              <dt>支払いはいつ、どの方法で行いますか。</dt>
+              <dd>お支払いは銀行振込です。LP制作は発注時に50%、残金は個別見積書・発注書に記載した期日までにお願いしています。消費税と振込手数料は、お客様のご負担となります。着手金のご入金を確認してから制作に入るため、入金日が納期の起算点のひとつになります。</dd>
+            </div>
+          
+          </dl>
+        </section>
+
         <div class="guide-cta">
           <p>何を載せるべきか決まっていない段階でも、現在のサイトやSNSを見ながら整理できます。</p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHgm-tuSU0YMjV0RTZdnLh150Y-tQAYnG98cQXSLQK-lnRzQ/viewform" class="button primary" target="_blank" rel="noopener" data-analytics-event="contact_form_open">LP制作を相談する</a>
@@ -202,7 +385,7 @@
         </div>
         <aside class="guide-author">
           <p>執筆：<strong><a href="../about.html">小松 昌</a></strong>（株式会社MG ActPraise 代表取締役／神奈川県鎌倉市腰越）</p>
-          <p>テンプレートを使わず、HTML・CSS・JavaScriptで一から制作しています。成果保証はしていませんが、なぜその構成にしたのかは必ず言葉で説明します。対応できること・できないことは<a href="../about.html">運営者情報</a>に明記しています。</p>
+          <p>テンプレートを使わず、HTML・CSS・JavaScriptで一から制作しています。成果保証はしていませんが、なぜその構成にしたのかは必ず言葉で説明します。対応できること・できないことの全体像は<a href="../about.html">運営者情報</a>に記載しています。</p>
         </aside>
         <aside class="guide-related">
           <h2>関連ページ</h2>

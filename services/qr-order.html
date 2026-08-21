@@ -41,7 +41,14 @@
       "serviceType": "業務システム開発",
       "description": "客席のQRコードから注文し、スタッフの管理画面で対応・会計・売上確認まで行える店舗向けシステムの開発。",
       "provider": { "@id": "https://dosen-lab.co.jp/#organization" },
-      "areaServed": "JP"
+      "areaServed": "JP",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "url": "https://dosen-lab.co.jp/services/qr-order.html#price",
+        "description": "要件により個別見積。席数、メニュー数、会計方法、既存レジとの関係で変わります。注文画面、未対応注文一覧、会計確認、売上レポート、部屋・席の管理、QRコードの発行、初期設定を含みます。運用開始後のサーバー・データベース利用料、既存レジやPOSとの連携開発、店舗スタッフの運用代行、売上・注文数の保証は含みません。金額は税別で、支払いは銀行振込です。"
+      }
     }
     </script>
     <script type="application/ld+json">
@@ -164,7 +171,7 @@
           <p>既製のサービスで足りる場合は無理に開発を勧めません。メニュー数、席数、会計方法、既存レジとの関係を確認したうえで、作る範囲を決めます。</p>
         </section>
 
-        <section class="guide-section">
+        <section class="guide-section" id="price">
           <h2>料金と進め方</h2>
           <p class="guide-answer">店舗ごとに席数、メニュー構成、会計方法、既存レジとの関係が異なるため、定額プランは設けていません。要件を確認したうえで、対象範囲と金額を書面で明示してから着手します。</p>
           <div class="guide-table-wrap">
