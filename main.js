@@ -189,11 +189,14 @@
   const root = document.documentElement;
   root.classList.add("js");
 
-  /* boot: typed status line, masked headline, hero marker underline */
+  /* boot: typed status line, masked headline, hero marker underline
+     h1 は .js が付いた時点で枠外へ退避し、.booted で戻る。
+     load 起点にすると 600KB のヒーロー動画のダウンロード完了まで
+     見出しが空白のままになるため、DOM 構築完了で解放する。 */
   const boot = () => requestAnimationFrame(() => root.classList.add("booted"));
-  if (document.readyState === "complete") boot();
-  else window.addEventListener("load", boot);
-  setTimeout(() => root.classList.add("booted"), 2500);
+  if (document.readyState !== "loading") boot();
+  else document.addEventListener("DOMContentLoaded", boot);
+  setTimeout(() => root.classList.add("booted"), 500);
 
   /* ---- scroll reveals ---- */
   const targets = document.querySelectorAll(
