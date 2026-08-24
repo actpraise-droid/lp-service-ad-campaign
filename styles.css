@@ -1938,6 +1938,101 @@ html:not(.js) .scan {
   color: var(--accent);
 }
 
+/* カードにするほど主力ではないが、価格を1か所で見せるために必要なメニュー。
+   4枚のカードと張り合わせず、行で淡々と並べる。 */
+.price-extra {
+  margin-top: 1px;
+  padding: 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 0;
+}
+
+.price-extra > h3 {
+  margin: 0 0 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.price-extra ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-extra li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-extra li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.price-extra strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.price-extra .px {
+  font-family: var(--mono);
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.price-extra .px small {
+  margin-left: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.price-extra em {
+  grid-column: 1 / -1;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.price-extra > p {
+  margin: 18px 0 0;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.price-extra a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.price-extra a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .price-extra li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .price-extra .px {
+    text-align: left;
+  }
+}
+
 /* ---------- decision ---------- */
 .decision-grid {
   display: grid;
@@ -2683,6 +2778,21 @@ html.js .contact-section .lit .mark {
   color: var(--ink-p);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* 支払時期と引渡し時期は、商品名ではなく類型で定めている。
+   番号がサービス内容欄の類型番号と対応するので、番号自体が情報になる。 */
+.legal-table dd ol {
+  margin: 8px 0 0;
+  padding: 0 0 0 1.5em;
+}
+
+.legal-table dd ol li {
+  margin: 0 0 10px;
+}
+
+.legal-table dd ol li:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
