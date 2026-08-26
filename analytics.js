@@ -1,12 +1,32 @@
 (() => {
   const send = (name, link) => {
-    if (typeof window.gtag !== "function") return;
     const parameters = {
       link_url: link?.href || "",
       link_text: (link?.textContent || "").trim().slice(0, 100),
       page_location: window.location.href,
       transport_type: "beacon",
     };
+
+    /* Meta広告の最適化シグナル。gtag のガードより前に置くのは、
+       GA4 が読めなかった場合でも Meta には届くようにするため。
+       標準イベントの Lead ではなく trackCustom の FormOpen にしている。
+       これはフォームを「開いた」数であって送信数ではないので、Lead と
+       名付けるとMetaのレポート上で申込が発生したように見えてしまう。
+       実際の送信数を取れるようになったら、そちらを Lead に変える。 */
+    if (
+      typeof window.fbq === "function" &&
+      (name === "contact_form_open" ||
+        name === "email_click" ||
+        name === "line_click" ||
+        name === "reform_diagnosis_form_open")
+    ) {
+      window.fbq("trackCustom", "FormOpen", {
+        source: name,
+        page_location: window.location.href,
+      });
+    }
+
+    if (typeof window.gtag !== "function") return;
     window.gtag("event", name, parameters);
 
     // GA4で既にキーイベントに設定済みの推奨イベントにも接続する。
