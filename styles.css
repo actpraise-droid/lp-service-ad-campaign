@@ -3009,15 +3009,18 @@ html.js .contact-section .lit .mark {
 /* 広告の着地直後に置くブロック。広告は「1ページ無料で診断します」と言っているのに、
    このページ本文は5万円の有料診断を説明している。約束が一致しないと0秒で離脱するため、
    ファーストビューで無料チェックの中身と範囲を先に示す。 */
+/* ペーパー面に置く黒箱。同じ役割の .quality-note と辺・太さ・色を揃える。 */
 .ad-offer {
   margin: 28px 0 0;
   padding: 26px 26px 24px;
   background: var(--ink-p);
   color: var(--ink);
-  border-left: 4px solid var(--accent);
+  border-top: 4px solid var(--accent);
 }
 
-.ad-offer-eyebrow {
+/* eyebrow と note は .ad-offer > p (0,1,1) に負けるので、
+   同じ詳細度まで上げておく。クラスだけで書くと本文色に塗り潰される。 */
+.ad-offer > .ad-offer-eyebrow {
   margin: 0 0 10px;
   font-family: var(--mono);
   font-size: 11.5px;
@@ -3031,8 +3034,6 @@ html.js .contact-section .lit .mark {
   font-size: clamp(23px, 3.4vw, 30px);
   line-height: 1.35;
   color: var(--ink);
-  border: 0;
-  padding: 0;
 }
 
 .ad-offer > p {
@@ -3072,7 +3073,7 @@ html.js .contact-section .lit .mark {
   color: var(--ink);
 }
 
-.ad-offer-note {
+.ad-offer > .ad-offer-note {
   margin: 0 0 16px;
   max-width: 62ch;
   font-size: 13px;
@@ -3080,11 +3081,11 @@ html.js .contact-section .lit .mark {
   color: var(--muted);
 }
 
-.ad-offer-note:last-child {
+.ad-offer > .ad-offer-note:last-child {
   margin-bottom: 0;
 }
 
-.ad-offer-note strong {
+.ad-offer > .ad-offer-note strong {
   color: var(--ink);
 }
 
