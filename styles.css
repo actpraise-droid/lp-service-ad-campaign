@@ -3006,6 +3006,107 @@ html.js .contact-section .lit .mark {
   color: var(--muted-p);
 }
 
+/* 広告の着地直後に置くブロック。広告は「1ページ無料で診断します」と言っているのに、
+   このページ本文は5万円の有料診断を説明している。約束が一致しないと0秒で離脱するため、
+   ファーストビューで無料チェックの中身と範囲を先に示す。 */
+.ad-offer {
+  margin: 28px 0 0;
+  padding: 26px 26px 24px;
+  background: var(--ink-p);
+  color: var(--ink);
+  border-left: 4px solid var(--accent);
+}
+
+.ad-offer-eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.ad-offer > h2 {
+  margin: 0 0 14px;
+  font-size: clamp(23px, 3.4vw, 30px);
+  line-height: 1.35;
+  color: var(--ink);
+  border: 0;
+  padding: 0;
+}
+
+.ad-offer > p {
+  margin: 0 0 16px;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--cap);
+}
+
+.ad-offer-spec {
+  display: grid;
+  gap: 1px;
+  margin: 0 0 18px;
+  background: rgba(241, 241, 236, 0.16);
+  border: 1px solid rgba(241, 241, 236, 0.16);
+}
+
+.ad-offer-spec > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.28fr) 1fr;
+  gap: 16px;
+  padding: 11px 16px;
+  background: var(--ink-p);
+}
+
+.ad-offer-spec dt {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.ad-offer-spec dd {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.ad-offer-note {
+  margin: 0 0 16px;
+  max-width: 62ch;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.ad-offer-note:last-child {
+  margin-bottom: 0;
+}
+
+.ad-offer-note strong {
+  color: var(--ink);
+}
+
+.ad-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 640px) {
+  .ad-offer-spec > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .ad-offer-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .guide-cta {
   margin: 48px 0 0;
   padding: 28px 26px;
