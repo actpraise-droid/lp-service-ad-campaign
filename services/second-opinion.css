@@ -1,0 +1,104 @@
+/* Scope readability changes to this service page. */
+.second-opinion-page #diagnosis-options,
+.second-opinion-page #diagnosis-price {
+  scroll-margin-top: 128px;
+}
+
+.second-opinion-page .ad-offer-note a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.so-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.so-option {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line-p);
+  border-top: 4px solid var(--ink-p);
+  background: var(--paper-card);
+}
+
+.so-option-paid {
+  border-top-color: var(--accent);
+}
+
+.so-options .so-option-label {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.so-option h3 {
+  margin: 0 0 12px;
+  font-family: var(--disp);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.so-options .so-price {
+  margin: 0 0 24px;
+  color: var(--ink-p);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.so-price span {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.so-option dl {
+  margin: 0;
+}
+
+.so-option dl > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--line-p);
+}
+
+.so-option dt {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.so-option dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.second-opinion-page .guide-table {
+  min-width: 0;
+  table-layout: fixed;
+  overflow-wrap: anywhere;
+}
+
+.second-opinion-page .guide-table th:first-child {
+  width: 30%;
+}
+
+@media (max-width: 640px) {
+  .so-options {
+    grid-template-columns: 1fr;
+  }
+
+  .so-option {
+    padding: 20px;
+  }
+
+  .second-opinion-page .guide-table th,
+  .second-opinion-page .guide-table td {
+    padding: 12px 10px;
+  }
+}
