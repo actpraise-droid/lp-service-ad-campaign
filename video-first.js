@@ -10,23 +10,36 @@
     'edit-c': {title:'パターンC・使う場面から', subtitle:'次の休憩は、コーヒーに。', stock:true, description:'休憩する場面を言葉にして、自分の生活に重ねられる構成に。'},
   };
   const services={video:'動画・画像制作',lp:'LP制作',both:'動画＋LP制作'};
+  const industries={cafe:'飲食・カフェ',product:'商品・EC',living:'住宅・リフォーム',beauty:'美容・サロン',school:'スクール・ジム',service:'企業・地域サービス',other:'その他'};
+  const materials={ready:'動画がある',planned:'これから撮影する',advice:'何を撮ればよいか相談したい'};
+  const industryField=document.getElementById('inquiry-industry');
+  const purposeField=document.getElementById('inquiry-purpose');
+  const materialsField=document.getElementById('inquiry-materials');
   const dialog=document.getElementById('media-dialog');
   const video=document.getElementById('demo-video');
   const image=document.getElementById('demo-image');
   const note=document.getElementById('dialog-note');
   let galleryFormat='video',compareFormat='video',variant='a',selected=null,activeMedia=null,opener=null,service='video';
   function track(name,details){if(typeof window.gtag==='function')window.gtag('event',name,details);}
+  function inquiryText(){
+    const lines=['ご相談内容：'+services[service],'業種：'+(industries[industryField.value]||'未選択'),'制作したいもの・用途：'+(purposeField.value.trim()||'これから相談したい')];
+    if(service!=='lp')lines.push('動画素材：'+(materials[materialsField.value]||'未選択'));
+    if(selected&&service!=='lp')lines.push('気になった見本：'+cases[selected].title+'「'+cases[selected].subtitle+'」');
+    return lines.join('\n');
+  }
   function updateContact(){
-    const subject=services[service]+'の相談'+(selected&&service!=='lp'?'｜'+cases[selected].title+'の見本について':'');
-    document.getElementById('email-contact').href='mailto:actpraise@gmail.com?subject='+encodeURIComponent(subject);
+    const subject=services[service]+'の相談'+(industries[industryField.value]?'｜'+industries[industryField.value]:'')+(selected&&service!=='lp'?'｜'+cases[selected].title+'の見本について':'');
+    document.getElementById('email-contact').href='mailto:actpraise@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(inquiryText());
     document.getElementById('contact-selection').textContent='ご相談内容：'+services[service];
     document.querySelectorAll('[data-service-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.serviceChoice===service)));
     const summary=document.getElementById('selected-sample');
     summary.hidden=!selected||service==='lp';
     summary.textContent=selected?'気になった見本：'+cases[selected].title+'「'+cases[selected].subtitle+'」':'';
+    document.getElementById('inquiry-materials-wrap').hidden=service==='lp';
   }
   function chooseService(value){if(!services[value])return;service=value;if(service==='lp')selected=null;updateContact();}
-  function selectConsult(key){if(!cases[key])return;selected=key;service='video';updateContact();}
+  function chooseIndustry(value){if(!industries[value])return;industryField.value=value;selected=null;updateContact();}
+  function selectConsult(key){if(!cases[key])return;selected=key;service='video';if(industries[key])industryField.value=key;updateContact();}
   function openMedia(key,kind,trigger){
     const c=cases[key];if(!c)return;
     activeMedia=key;opener=trigger;
@@ -69,6 +82,7 @@
   document.addEventListener('click',event=>{
     const control=event.target.closest('button,a');if(!control)return;
     if(control.dataset.open)openMedia(control.dataset.open,control.dataset.kind,control);
+    if(control.dataset.industry)chooseIndustry(control.dataset.industry);
     if(control.dataset.service)chooseService(control.dataset.service);
     if(control.dataset.serviceChoice)chooseService(control.dataset.serviceChoice);
     if(control.dataset.consult)selectConsult(control.dataset.consult);
@@ -87,9 +101,11 @@
       const href=control.getAttribute('href')||'';
       const name=control.dataset.analyticsEvent||(href==='#contact'?'contact_click':null);
       if(name){
-        track(name,{link_url:control.href,page_location:location.href,sample_id:selected||'none',service_type:service});
+        // The email body can contain customer-entered information; keep it out of analytics.
+        const trackedUrl=href.startsWith('mailto:')?href.split('?')[0]:control.href;
+        track(name,{link_url:trackedUrl,page_location:location.href,sample_id:selected||'none',service_type:service});
         // A channel click is not a completed inquiry.
-        if(['line_click','email_click'].includes(name)&&typeof window.fbq==='function')window.fbq('trackCustom','Contact',{source:name,page_location:location.href});
+        if(name==='email_click'&&typeof window.fbq==='function')window.fbq('trackCustom','Contact',{source:name,page_location:location.href});
       }
     }
   });
@@ -102,5 +118,8 @@
   video.addEventListener('error',()=>{if(video.getAttribute('src'))note.textContent='動画を読み込めませんでした。閉じて、もう一度お試しください。';});
   image.addEventListener('error',()=>{if(image.getAttribute('src'))note.textContent='画像を読み込めませんでした。閉じて、もう一度お試しください。';});
   document.getElementById('dialog-consult').addEventListener('click',()=>{selectConsult(activeMedia);dialog.close();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}),0);});
+  industryField.addEventListener('change',()=>{selected=null;updateContact();});
+  purposeField.addEventListener('input',updateContact);
+  materialsField.addEventListener('change',updateContact);
   updateContact();
 })();
