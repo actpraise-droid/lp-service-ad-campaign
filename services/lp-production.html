@@ -7,8 +7,13 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-6W72X3ZKMM');
+      if (location.origin === 'https://dosen-lab.co.jp') {
+        let safeReferrer = '';
+        try { safeReferrer = document.referrer ? new URL(document.referrer).origin : ''; } catch (_) {}
+        gtag('config', 'G-6W72X3ZKMM', { page_location: location.origin + location.pathname, page_referrer: safeReferrer });
+      }
     </script>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon.ico" sizes="32x32">
@@ -33,7 +38,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="lp-production.css">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "@id": "https://dosen-lab.co.jp/services/lp-production.html#service", "name": "問い合わせ導線LP制作", "serviceType": "ランディングページ制作", "provider": {"@id": "https://dosen-lab.co.jp/#organization"}, "areaServed": "JP", "url": "https://dosen-lab.co.jp/services/lp-production.html", "description": "顧客心理の整理、構成、コピー、デザイン、実装、公開前QAまで一貫して行うLP制作サービス。", "offers": [{"@type": "Offer", "name": "導線LP制作", "priceCurrency": "JPY", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "150000", "priceCurrency": "JPY", "valueAddedTaxIncluded": false}, "description": "150,000円(税別)から。構成設計、原稿編集、修正2回、デザイン・実装、公開前QA、GA4の計測設定を含みます。正式発注・素材提出・着手金の入金確認後10営業日。撮影、広告運用、外部システム連携、成果保証は含みません。", "availability": "https://schema.org/InStock", "url": "https://dosen-lab.co.jp/services/lp-production.html#price"}, {"@type": "Offer", "name": "動画・漫画つきLP", "priceCurrency": "JPY", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "300000", "priceCurrency": "JPY", "valueAddedTaxIncluded": false}, "description": "300,000円(税別)から。金額は下限で、素材量により個別見積となります。導線LP制作の範囲に加えて動画・漫画・図解の制作を含みます。", "availability": "https://schema.org/InStock", "url": "https://dosen-lab.co.jp/services/lp-production.html#price"}, {"@type": "Offer", "name": "改善運用", "priceCurrency": "JPY", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "30000", "priceCurrency": "JPY", "valueAddedTaxIncluded": false, "unitCode": "DAY", "billingDuration": 30, "billingIncrement": 1}, "description": "月額30,000円(税別)から。一括ではなく開始日から30日単位の継続課金です。公開後の数値確認、改善提案、軽微な修正を含みます。広告費、広告運用代行、成果保証は含みません。", "availability": "https://schema.org/InStock", "url": "https://dosen-lab.co.jp/services/lp-production.html#price"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://dosen-lab.co.jp/services/lp-production.html#faq", "mainEntity": [{"@type": "Question", "name": "何を載せるか決まっていなくても相談できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。現在のホームページやSNS、サービス資料を見ながら、誰に何を伝えるかを整理します。まずは業種・作りたいページの用途をメールでお知らせください。"}}, {"@type": "Question", "name": "15万円に何が含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "1サービス・1ページを基本に、構成設計、原稿編集、デザイン・実装、修正2回、公開前の表示・リンク・相談導線の確認、GA4の計測設定を含みます。素材量や公開環境による追加作業は、着手前に見積もりで明示します。"}}, {"@type": "Question", "name": "動画素材がなくてもLP制作を依頼できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。LP制作に動画は必須ではありません。写真・ロゴ・サービス資料など、掲載に使える素材を確認します。撮影や新しい素材の制作が必要な場合は、範囲と料金を別途ご案内します。"}}, {"@type": "Question", "name": "納期はいつから数えますか？", "acceptedAnswer": {"@type": "Answer", "text": "正式発注・素材提出・着手金の入金確認後、標準10営業日です。制作内容と同時進行の状況によって着手日・納期が変わるため、発注・入金の前に予定をご案内します。"}}, {"@type": "Question", "name": "湘南以外や、対面での相談にも対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "藤沢・茅ヶ崎・鎌倉をはじめ、全国オンラインで対応しています。神奈川県・東京都は訪問相談にも対応しています。方法と日程は事前にご相談ください。"}}, {"@type": "Question", "name": "広告運用も料金に含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "広告配信費・広告運用代行は含まれません。広告から訪れた方に内容が伝わるLPの制作が対象です。問い合わせ数・売上・検索順位の保証はありません。"}}, {"@type": "Question", "name": "支払い・キャンセルはどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "銀行振込で、LP制作は発注時50%、残金は見積書・発注書に記載した期日までにお支払いいただきます。制作途中のキャンセルは進行状況と発注条件に応じて精算します。当社都合で提供できない場合は未提供分を返金します。詳細は特定商取引法に基づく表記をご確認ください。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://dosen-lab.co.jp/services/lp-production.html#faq", "mainEntity": [{"@type": "Question", "name": "何を載せるか決まっていなくても相談できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。現在のホームページやSNS、サービス資料を見ながら、誰に何を伝えるかを整理します。まずは業種・作りたいページの用途をフォームでお知らせください。"}}, {"@type": "Question", "name": "15万円に何が含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "1サービス・1ページを基本に、構成設計、原稿編集、デザイン・実装、修正2回、公開前の表示・リンク・相談導線の確認、GA4の計測設定を含みます。素材量や公開環境による追加作業は、着手前に見積もりで明示します。"}}, {"@type": "Question", "name": "動画素材がなくてもLP制作を依頼できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。LP制作に動画は必須ではありません。写真・ロゴ・サービス資料など、掲載に使える素材を確認します。撮影や新しい素材の制作が必要な場合は、範囲と料金を別途ご案内します。"}}, {"@type": "Question", "name": "納期はいつから数えますか？", "acceptedAnswer": {"@type": "Answer", "text": "正式発注・素材提出・着手金の入金確認後、標準10営業日です。制作内容と同時進行の状況によって着手日・納期が変わるため、発注・入金の前に予定をご案内します。"}}, {"@type": "Question", "name": "湘南以外や、対面での相談にも対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "藤沢・茅ヶ崎・鎌倉をはじめ、全国オンラインで対応しています。神奈川県・東京都は訪問相談にも対応しています。方法と日程は事前にご相談ください。"}}, {"@type": "Question", "name": "広告運用も料金に含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "広告配信費・広告運用代行は含まれません。広告から訪れた方に内容が伝わるLPの制作が対象です。問い合わせ数・売上・検索順位の保証はありません。"}}, {"@type": "Question", "name": "支払い・キャンセルはどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "銀行振込で、LP制作は発注時50%、残金は見積書・発注書に記載した期日までにお支払いいただきます。制作途中のキャンセルは進行状況と発注条件に応じて精算します。当社都合で提供できない場合は未提供分を返金します。詳細は特定商取引法に基づく表記をご確認ください。"}}]}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://dosen-lab.co.jp/#organization", "name": "導線デベロッパー", "alternateName": "DOSEN-DEVELOPER", "url": "https://dosen-lab.co.jp/", "areaServed": "JP", "parentOrganization": {"@id": "https://dosen-lab.co.jp/#legal-entity"}}, {"@type": "Organization", "@id": "https://dosen-lab.co.jp/#legal-entity", "name": "株式会社MG ActPraise", "url": "https://dosen-lab.co.jp/", "address": {"@type": "PostalAddress", "postalCode": "248-0033", "addressRegion": "神奈川県", "addressLocality": "鎌倉市", "streetAddress": "腰越3-5-29", "addressCountry": "JP"}}, {"@type": "Person", "@id": "https://dosen-lab.co.jp/#person-komatsu", "name": "小松 昌", "jobTitle": "代表取締役", "worksFor": {"@id": "https://dosen-lab.co.jp/#legal-entity"}, "mainEntityOfPage": "https://dosen-lab.co.jp/about.html", "knowsAbout": ["ランディングページ制作", "問い合わせ導線の設計", "コンバージョン改善", "構造化データ（JSON-LD）の実装", "AI検索対策（AEO）"], "sameAs": ["https://note.com/m_m730", "https://mgap.co.jp/"]}]}</script>
     <!-- Meta Pixel Code -->
     <script>
@@ -56,7 +61,7 @@
     <a class="skip-link" href="#main">本文へ移動</a>
     <header class="lp-header">
       <a class="lp-brand" href="/">導線デベロッパー<small>鎌倉・腰越のWeb制作室</small></a>
-      <nav aria-label="ページ内メニュー"><a href="#cases">制作例</a><a href="#price">料金</a><a href="#flow">進め方</a><a class="lp-button" href="#contact">メールで相談 <span aria-hidden="true">↗</span></a></nav>
+      <nav aria-label="ページ内メニュー"><a href="#cases">制作例</a><a href="#price">料金</a><a href="#flow">進め方</a><a class="lp-button" href="#contact">制作を相談 <span aria-hidden="true">↗</span></a></nav>
     </header>
 
     <main id="main" class="lp-main">
@@ -91,7 +96,7 @@
         <div class="lp-route-board">
           <div class="lp-route-line"><span>聞く</span><strong>お客さまが迷っていること</strong><p>誰に、どんな場面で選ばれたいのか。今ある資料を見ながら話します。</p></div>
           <div class="lp-route-line"><span>組む</span><strong>読まれる順番と伝える言葉</strong><p>広告、新サービス、店舗案内。それぞれに必要な情報を1ページへ。</p></div>
-          <div class="lp-route-line"><span>確かめる</span><strong>スマホで伝わり、相談できるか</strong><p>表示、リンク、メール導線、計測を確認してから公開します。</p></div>
+          <div class="lp-route-line"><span>確かめる</span><strong>スマホで伝わり、相談できるか</strong><p>表示、リンク、相談フォーム、計測を確認してから公開します。</p></div>
         </div>
         <p class="lp-margin-note">「何を載せるか」が決まっていない段階でも大丈夫です。</p>
       </section>
@@ -123,7 +128,7 @@
 
       <section class="lp-section lp-flow" id="flow">
         <header class="lp-section-head"><p class="lp-index">04 / 進め方</p><h2>最初の相談から公開まで、<br>担当は変わりません。</h2></header>
-        <ol class="lp-steps"><li><span>01</span><strong>メールで相談</strong><p>業種、用途、希望時期をお知らせください。</p></li><li><span>02</span><strong>範囲と見積もり</strong><p>資料を確認し、総額と予定納期をご案内します。</p></li><li><span>03</span><strong>制作と確認</strong><p>構成、原稿、画面を確認しながら進めます。</p></li><li><span>04</span><strong>最終確認・公開</strong><p>スマホ表示、相談導線、計測まで確認します。</p></li></ol>
+        <ol class="lp-steps"><li><span>01</span><strong>フォームで相談</strong><p>業種、用途、希望時期をお知らせください。</p></li><li><span>02</span><strong>範囲と見積もり</strong><p>資料を確認し、総額と予定納期をご案内します。</p></li><li><span>03</span><strong>制作と確認</strong><p>構成、原稿、画面を確認しながら進めます。</p></li><li><span>04</span><strong>最終確認・公開</strong><p>スマホ表示、相談導線、計測まで確認します。</p></li></ol>
         <aside class="lp-person"><p class="lp-person-label">つくる人</p><div><h3>小松 昌</h3><p>株式会社MG ActPraise 代表 / 神奈川県鎌倉市腰越</p></div><p>企画、構成、原稿、実装、公開を1名で担当します。何を載せるか未定でも、現在のサイトや資料から一緒に整理できます。</p><a class="lp-text-link" href="../about.html">運営者情報を見る</a></aside>
       </section>
 
@@ -136,20 +141,40 @@
 
       <section class="lp-section lp-faq-section" id="faq">
         <header class="lp-section-head"><p class="lp-index">06 / よくある質問</p><h2>ご相談の前に。</h2></header>
-        <div class="lp-faq-list"><details class="lp-faq"><summary>何を載せるか決まっていなくても相談できますか？</summary><p>はい。現在のホームページやSNS、サービス資料を見ながら、誰に何を伝えるかを整理します。まずは業種・作りたいページの用途をメールでお知らせください。</p></details><details class="lp-faq"><summary>15万円に何が含まれますか？</summary><p>1サービス・1ページを基本に、構成設計、原稿編集、デザイン・実装、修正2回、公開前の表示・リンク・相談導線の確認、GA4の計測設定を含みます。追加作業は着手前に見積もりで明示します。</p></details><details class="lp-faq"><summary>動画素材がなくてもLP制作を依頼できますか？</summary><p>はい。LP制作に動画は必須ではありません。写真、ロゴ、サービス資料など、掲載に使える素材を確認します。新しい素材の制作が必要な場合は別途ご案内します。</p></details><details class="lp-faq"><summary>納期はいつから数えますか？</summary><p>正式発注、素材提出、着手金の入金確認後、標準10営業日です。制作内容と進行状況により着手日・納期が変わるため、発注前に予定をご案内します。</p></details><details class="lp-faq"><summary>湘南以外や、対面での相談にも対応していますか？</summary><p>藤沢・茅ヶ崎・鎌倉をはじめ、全国オンラインで対応しています。神奈川県・東京都は訪問相談にも対応しています。方法と日程は事前にご相談ください。</p></details><details class="lp-faq"><summary>広告運用も料金に含まれますか？</summary><p>広告配信費・広告運用代行は含まれません。広告から訪れた方に内容が伝わるLPの制作が対象です。問い合わせ数、売上、検索順位の保証はありません。</p></details><details class="lp-faq"><summary>支払い・キャンセルはどうなりますか？</summary><p>銀行振込で、発注時50%、残金は見積書・発注書に記載した期日までにお支払いください。制作途中のキャンセルは進行状況と発注条件に応じて精算します。当社都合で提供できない場合は未提供分を返金します。詳細は特定商取引法に基づく表記をご確認ください。</p></details></div>
+        <div class="lp-faq-list"><details class="lp-faq"><summary>何を載せるか決まっていなくても相談できますか？</summary><p>はい。現在のホームページやSNS、サービス資料を見ながら、誰に何を伝えるかを整理します。まずは業種・作りたいページの用途をフォームでお知らせください。</p></details><details class="lp-faq"><summary>15万円に何が含まれますか？</summary><p>1サービス・1ページを基本に、構成設計、原稿編集、デザイン・実装、修正2回、公開前の表示・リンク・相談導線の確認、GA4の計測設定を含みます。追加作業は着手前に見積もりで明示します。</p></details><details class="lp-faq"><summary>動画素材がなくてもLP制作を依頼できますか？</summary><p>はい。LP制作に動画は必須ではありません。写真、ロゴ、サービス資料など、掲載に使える素材を確認します。新しい素材の制作が必要な場合は別途ご案内します。</p></details><details class="lp-faq"><summary>納期はいつから数えますか？</summary><p>正式発注、素材提出、着手金の入金確認後、標準10営業日です。制作内容と進行状況により着手日・納期が変わるため、発注前に予定をご案内します。</p></details><details class="lp-faq"><summary>湘南以外や、対面での相談にも対応していますか？</summary><p>藤沢・茅ヶ崎・鎌倉をはじめ、全国オンラインで対応しています。神奈川県・東京都は訪問相談にも対応しています。方法と日程は事前にご相談ください。</p></details><details class="lp-faq"><summary>広告運用も料金に含まれますか？</summary><p>広告配信費・広告運用代行は含まれません。広告から訪れた方に内容が伝わるLPの制作が対象です。問い合わせ数、売上、検索順位の保証はありません。</p></details><details class="lp-faq"><summary>支払い・キャンセルはどうなりますか？</summary><p>銀行振込で、発注時50%、残金は見積書・発注書に記載した期日までにお支払いください。制作途中のキャンセルは進行状況と発注条件に応じて精算します。当社都合で提供できない場合は未提供分を返金します。詳細は特定商取引法に基づく表記をご確認ください。</p></details></div>
       </section>
 
       <section class="lp-contact" id="contact" aria-labelledby="contact-title">
-        <div class="lp-contact-head"><p class="lp-index">相談窓口</p><h2 id="contact-title">作りたいページのこと、<br>メールで聞かせてください。</h2><p>用途が決まっていなくても、今のサイトや資料を見ながら整理します。選択項目は任意で、メール本文にだけ引き継ぎます。</p></div>
-        <div class="lp-fields"><label for="lp-area">所在地<select id="lp-area"><option value="">未選択</option><option>藤沢市</option><option>茅ヶ崎市</option><option>鎌倉市</option><option>その他の地域</option></select></label><label for="lp-purpose">作りたいページ<select id="lp-purpose"><option value="">未選択</option><option>広告用のLP</option><option>新サービスの紹介</option><option>店舗・体験・予約の案内</option><option>既存ページの改善</option><option>相談して決めたい</option></select></label><label for="lp-timing">希望時期<select id="lp-timing"><option value="">未選択</option><option>1か月以内を希望</option><option>1〜3か月以内</option><option>相談して決めたい</option></select></label></div>
-        <p class="lp-contact-hint">メールに会社・店舗名、現在のサイト、予算の目安を追記してください。選択内容はこのページから送信・保存されません。</p>
-        <a class="lp-button light" id="lp-email" href="mailto:actpraise@gmail.com?subject=LP%E5%88%B6%E4%BD%9C%E3%81%AE%E7%9B%B8%E8%AB%87%EF%BD%9C%E6%B9%98%E5%8D%97LP&amp;body=%E4%BC%9A%E7%A4%BE%E3%83%BB%E5%BA%97%E8%88%97%E5%90%8D%EF%BC%9A%0A%E6%89%80%E5%9C%A8%E5%9C%B0%EF%BC%9A%0A%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%BB%E7%94%A8%E9%80%94%EF%BC%9A%0A%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BBSNS%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E6%99%82%E6%9C%9F%EF%BC%9A%0A%E4%BA%88%E7%AE%97%E3%81%AE%E7%9B%AE%E5%AE%89%EF%BC%9A%0A%0A%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A">メールを開いて相談する <span aria-hidden="true">↗</span></a>
-        <p class="lp-email-address">送信先：<a href="mailto:actpraise@gmail.com">actpraise@gmail.com</a></p><p class="lp-contact-hint">メールアプリが開かない場合は上記アドレスへ直接お送りください。送信前に<a href="../privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+        <header class="lp-contact-head"><p class="lp-index">CONTACT</p><h2 id="contact-title">つくりたいページのこと、<br>お聞かせください。</h2><p>LP制作は15万円〈税別〉から。内容が決まっていなくてもご相談いただけます。<br>用途とご希望を確認して、制作範囲・総額・予定納期をご案内します。</p></header>
+        <form id="lp-inquiry-form" class="lp-inquiry-form" aria-describedby="lp-form-privacy" method="post">
+          <fieldset>
+            <legend class="lp-sr-only">LP制作のご相談</legend>
+            <div class="lp-form-grid">
+              <label for="lp-company">会社・店舗名 <span class="lp-required">必須</span><input id="lp-company" name="company" type="text" autocomplete="organization" maxlength="120" required placeholder="例：株式会社〇〇 / 〇〇商店"></label>
+              <label for="lp-contact-email">返信先メール <span class="lp-required">必須</span><input id="lp-contact-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="例：info@example.jp"></label>
+              <label class="lp-form-wide" for="lp-website">現在のサイト・SNS <span class="lp-optional">任意</span><input id="lp-website" name="website" type="url" inputmode="url" autocomplete="url" maxlength="500" placeholder="https://"></label>
+              <label class="lp-form-wide" for="lp-purpose">作りたいページ・ご相談内容 <span class="lp-required">必須</span><textarea id="lp-purpose" name="purpose" rows="4" maxlength="1000" required placeholder="例：藤沢で始める新サービスの紹介ページをつくりたい。今のホームページの改善も相談したい。"></textarea></label>
+              <label for="lp-timing">希望時期 <span class="lp-required">必須</span><select id="lp-timing" name="timing" required><option value="">選択してください</option><option>1か月以内を希望</option><option>1〜3か月以内</option><option>3か月以降</option><option>相談して決めたい</option></select></label>
+              <label for="lp-budget">予算の目安〈税別〉 <span class="lp-required">必須</span><select id="lp-budget" name="budget" required><option value="">選択してください</option><option>15万〜30万円</option><option>30万〜50万円</option><option>50万円以上</option><option>相談して決めたい</option></select></label>
+            </div>
+            <div class="lp-form-honeypot" aria-hidden="true"><label>この欄は入力しないでください<input type="text" name="website_confirm" autocomplete="off" tabindex="-1"></label></div>
+          </fieldset>
+          <p id="lp-form-privacy" class="lp-form-note"><a href="../privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認のうえ送信してください。送信により、相談対応・案件管理と広告効果の確認のための情報利用に同意いただいたものとします。ご相談の送信だけで契約や料金は発生しません。</p>
+          <p id="lp-form-status" class="lp-form-status" role="status" aria-live="polite" hidden></p>
+          <button class="lp-button light" type="submit">この内容で相談する</button>
+        </form>
+        <div id="lp-inline-success" class="lp-inline-success" hidden><h3>ご相談を受け付けました。</h3><p>内容を確認し、ご入力のメールアドレスへ担当者からご連絡します。</p></div>
+        <noscript><style>.lp-inquiry-form{display:none}</style><p class="lp-contact-hint">フォームの送信にはJavaScriptが必要です。下記メールアドレスからもご相談いただけます。</p></noscript>
+        <p class="lp-email-address">メールでのご相談：<a id="lp-email" href="mailto:actpraise@gmail.com?subject=LP%E5%88%B6%E4%BD%9C%E3%81%AE%E7%9B%B8%E8%AB%87" data-position="contact">actpraise@gmail.com</a></p>
       </section>
     </main>
 
     <footer class="lp-footer"><p>© 2026 株式会社MG ActPraise / 導線デベロッパー</p><nav aria-label="会社・規約"><a href="../about.html">運営者情報</a><a href="../tokushoho.html">特定商取引法に基づく表記</a><a href="../privacy.html">プライバシーポリシー</a></nav></footer>
     <a class="lp-mobile-cta lp-button" href="#contact" data-position="mobile" hidden>LP制作を相談する <span aria-hidden="true">↗</span></a>
+    <script src="lp-lead-config.js" defer></script>
+    <script src="lp-lead-tracking.js" defer></script>
+    <script src="lp-attribution.js" defer></script>
     <script src="lp-production.js" defer></script>
+    <script src="lp-form.js" defer></script>
   </body>
 </html>
