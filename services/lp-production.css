@@ -157,20 +157,12 @@
 .lp-maker strong { color: var(--lp-ink); font-size: 13px; }
 .lp-maker small { font-size: 11px; }
 
-.lp-hero-work { position: relative; margin: 6px 0 0; padding: 13px 13px 52px; background: var(--lp-ink); transform: rotate(1.15deg); }
+.lp-hero-work { position: relative; margin: 6px 0 0; padding: 13px 13px 52px; background: var(--lp-ink); }
 .lp-work-frame { overflow: hidden; background: #fff; }
 .lp-work-frame img { display: block; width: 100%; aspect-ratio: 1.25; object-fit: cover; object-position: top; }
 .lp-hero-work figcaption { position: absolute; right: 16px; bottom: 12px; left: 17px; display: flex; align-items: center; justify-content: space-between; color: #fff; font-size: 11px; }
 .lp-hero-work figcaption span { color: var(--lp-acid); font-family: "IBM Plex Mono", monospace; }
 .lp-hero-work figcaption strong { font-size: 12px; }
-
-.lp-note { position: absolute; z-index: 2; margin: 0; padding: 5px 8px; background: var(--lp-acid); color: var(--lp-ink); font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600; line-height: 1.3; box-shadow: 3px 3px 0 #10120e; }
-.lp-note::after { position: absolute; height: 1px; background: var(--lp-acid); content: ""; transform-origin: left; }
-.note-a { top: 19%; left: -38px; transform: rotate(-4deg); }
-.note-a::after { top: 22px; left: 96%; width: 54px; transform: rotate(19deg); }
-.note-b { top: 49%; right: -25px; transform: rotate(3deg); }
-.note-b::after { top: 23px; right: 94%; width: 50px; transform: rotate(160deg); }
-.note-c { right: 29px; bottom: 71px; transform: rotate(-2deg); }
 
 .lp-offer {
   grid-column: 1 / -1;
@@ -228,7 +220,7 @@
 .lp-route-line > span { color: #506d00; font-family: "Zen Kaku Gothic New", sans-serif; font-size: 23px; font-weight: 900; }
 .lp-route-line > strong { font-size: 16px; }
 .lp-route-line > p { margin: 0; color: var(--lp-muted); font-size: 13px; }
-.lp-margin-note { width: fit-content; margin: 34px 7% 0 auto; padding: 6px 10px; background: var(--lp-acid); font-size: 12px; font-weight: 700; transform: rotate(-1.2deg); }
+.lp-margin-note { width: fit-content; margin: 34px 7% 0 auto; padding: 6px 10px; background: var(--lp-acid); font-size: 12px; font-weight: 700; }
 
 .lp-works .lp-section-head { margin-bottom: 70px; }
 .lp-case-image { display: block; overflow: hidden; border: 1px solid #898d83; background: #fff; }
@@ -243,11 +235,9 @@
 .lp-case-copy h3, .lp-case-pair h3 { margin: 8px 0 13px; font-family: "Zen Kaku Gothic New", sans-serif; font-size: 25px; font-weight: 900; line-height: 1.4; }
 .lp-case-lead { margin: 0 0 20px !important; color: var(--lp-ink) !important; font-size: 18px !important; font-weight: 700; }
 .lp-case-copy p, .lp-case-pair article > p { color: var(--lp-muted); font-size: 13px; }
-.lp-case-pair { display: grid; grid-template-columns: 1.18fr .82fr; gap: 11%; align-items: start; width: 88%; margin: 102px 0 72px auto; }
-.lp-case-pair article:last-child { margin-top: 120px; }
+.lp-case-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px; align-items: start; width: 100%; margin: 90px 0 72px; }
 .lp-case-pair .lp-case-image { margin-bottom: 24px; }
 .lp-case-pair .lp-case-image img { aspect-ratio: 1.45; }
-.lp-case-pair article:last-child .lp-case-image img { aspect-ratio: 1.2; }
 .lp-case-pair .lp-case-no { margin-bottom: 8px; color: #587900; }
 
 .lp-price-section { border-bottom: 0; }
@@ -338,7 +328,7 @@
   .lp-offer > a { grid-column: 1 / -1; justify-content: center; padding: 13px 0; border-top: 1px solid var(--lp-line); }
   .lp-route-board { width: 91%; }
   .lp-case-featured { gap: 38px; }
-  .lp-case-pair { width: 94%; gap: 8%; }
+  .lp-case-pair { gap: 34px; }
   .lp-price-sheet { grid-template-columns: 1fr 1fr; }
   .lp-price-main { grid-row: 1 / 3; }
   .lp-price-sheet > div:nth-child(2) { border-bottom: 1px solid #3c3e37; }
@@ -366,11 +356,7 @@
   .lp-actions .lp-button { width: 100%; }
   .lp-maker { line-height: 1.9; }
   .lp-maker small { flex-basis: 100%; margin-left: 0; }
-  .lp-hero-work { width: calc(100% - 14px); margin: 48px 0 36px 7px; padding: 9px 9px 43px; }
-  .lp-note { font-size: 8px; }
-  .note-a { left: -12px; }
-  .note-b { right: -13px; }
-  .note-c { right: 16px; bottom: 61px; }
+  .lp-hero-work { width: 100%; margin: 48px 0 36px; padding: 9px 9px 43px; }
   .lp-offer { display: block; margin-top: 0; }
   .lp-offer > div, .lp-offer > a { padding: 16px 0; border-right: 0; border-bottom: 1px solid var(--lp-line); }
   .lp-offer > a { justify-content: flex-start; border-top: 0; border-bottom: 0; }
@@ -392,8 +378,8 @@
   .lp-case-featured .lp-case-image { padding: 7px; }
   .lp-case-copy { padding: 28px 8px 0; }
   .lp-case-copy .lp-case-no { margin-bottom: 16px; }
-  .lp-case-pair { display: block; width: calc(100% - 25px); margin: 75px 0 48px auto; }
-  .lp-case-pair article + article { margin-top: 72px; margin-left: -25px; }
+  .lp-case-pair { display: block; width: 100%; margin: 65px 0 48px; }
+  .lp-case-pair article + article { margin-top: 64px; }
   .lp-price-section .lp-section-head { margin-bottom: 40px; }
   .lp-price-sheet { display: block; }
   .lp-price-sheet > div { padding: 33px 27px; border-right: 0; border-bottom: 1px solid #3c3e37; }
