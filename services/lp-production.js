@@ -26,6 +26,17 @@
   });
   const sticky = document.querySelector('.lp-mobile-cta');
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(entries => { sticky.hidden = entries[0].isIntersecting; }, {threshold: 0}).observe(document.getElementById('contact'));
+    const visibility = { hero: true, contact: false };
+    const updateSticky = () => { sticky.hidden = visibility.hero || visibility.contact; };
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.target.id === 'contact') visibility.contact = entry.isIntersecting;
+        else visibility.hero = entry.isIntersecting;
+      });
+      updateSticky();
+    }, {threshold: 0});
+    observer.observe(document.querySelector('.lp-actions .lp-button'));
+    observer.observe(document.getElementById('contact'));
+    updateSticky();
   }
 })();
