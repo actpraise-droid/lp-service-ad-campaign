@@ -243,6 +243,10 @@
 .lp-case-pair .lp-case-image { margin-bottom: 24px; }
 .lp-case-pair .lp-case-image img { aspect-ratio: 1.45; }
 .lp-case-pair .lp-case-no { margin-bottom: 8px; color: #587900; }
+.lp-case-store { margin-bottom: 36px; }
+.lp-case-store .lp-case-image img { height: auto; aspect-ratio: 1181 / 630; object-fit: contain; }
+.lp-case-url { display: inline-block; max-width: 100%; padding: 4px 0; color: var(--lp-ink); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 4px; }
+.lp-case-url:hover { color: #587900; }
 
 .lp-price-section { border-bottom: 0; }
 .lp-price-section .lp-section-head { margin-bottom: 55px; }
