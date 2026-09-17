@@ -159,7 +159,7 @@
 
 .lp-hero-work { position: relative; margin: 6px 0 0; padding: 13px 13px 52px; background: var(--lp-ink); }
 .lp-work-frame { overflow: hidden; background: #fff; }
-.lp-work-frame img { display: block; width: 100%; aspect-ratio: 1.25; object-fit: cover; object-position: top; }
+.lp-work-frame img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; object-position: top; }
 .lp-hero-work figcaption { position: absolute; right: 16px; bottom: 12px; left: 17px; display: flex; align-items: center; justify-content: space-between; color: #fff; font-size: 11px; }
 .lp-hero-work figcaption span { color: var(--lp-acid); font-family: "IBM Plex Mono", monospace; }
 .lp-hero-work figcaption strong { font-size: 12px; }
