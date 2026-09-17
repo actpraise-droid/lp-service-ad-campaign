@@ -234,7 +234,7 @@
 .lp-case-featured .lp-case-image { padding: 10px; background: var(--lp-ink); border: 0; }
 .lp-case-featured .lp-case-image img { aspect-ratio: 1.55; }
 .lp-case-copy { padding-right: 10px; }
-.lp-case-no { margin-bottom: 38px; color: #587900; }
+.lp-case-no { margin-bottom: 38px; color: #506d00; }
 .lp-case-type { color: var(--lp-muted); }
 .lp-case-copy h3, .lp-case-pair h3 { margin: 8px 0 13px; font-family: "Zen Kaku Gothic New", sans-serif; font-size: 25px; font-weight: 900; line-height: 1.4; }
 .lp-case-lead { margin: 0 0 20px !important; color: var(--lp-ink) !important; font-size: 18px !important; font-weight: 700; }
@@ -242,11 +242,11 @@
 .lp-case-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px; align-items: start; width: 100%; margin: 90px 0 72px; }
 .lp-case-pair .lp-case-image { margin-bottom: 24px; }
 .lp-case-pair .lp-case-image img { aspect-ratio: 1.45; }
-.lp-case-pair .lp-case-no { margin-bottom: 8px; color: #587900; }
+.lp-case-pair .lp-case-no { margin-bottom: 8px; color: #506d00; }
 .lp-case-store { margin-bottom: 36px; }
 .lp-case-store .lp-case-image img { height: auto; aspect-ratio: 1181 / 630; object-fit: contain; }
 .lp-case-url { display: inline-block; max-width: 100%; padding: 4px 0; color: var(--lp-ink); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 4px; }
-.lp-case-url:hover { color: #587900; }
+.lp-case-url:hover { color: #506d00; }
 
 .lp-price-section { border-bottom: 0; }
 .lp-price-section .lp-section-head { margin-bottom: 55px; }
@@ -275,18 +275,18 @@
 .lp-steps li { position: relative; min-height: 190px; padding: 24px 25px 24px 0; border-right: 1px solid var(--lp-line); }
 .lp-steps li:not(:first-child) { padding-left: 25px; }
 .lp-steps li:last-child { border-right: 0; }
-.lp-steps span { color: #587900; font-family: "IBM Plex Mono", monospace; font-size: 11px; }
+.lp-steps span { color: #506d00; font-family: "IBM Plex Mono", monospace; font-size: 11px; }
 .lp-steps strong { display: block; margin: 24px 0 9px; font-size: 16px; }
 .lp-steps p { margin: 0; color: var(--lp-muted); font-size: 12px; }
 .lp-person { display: grid; grid-template-columns: 130px 1fr 1.5fr auto; gap: 28px; align-items: center; margin-top: 46px; padding: 26px 0; border-top: 1px solid var(--lp-line); border-bottom: 1px solid var(--lp-line); }
-.lp-person-label { color: #587900; }
+.lp-person-label { color: #506d00; }
 .lp-person h3 { margin: 0 0 3px; font-size: 19px; }
 .lp-person div p, .lp-person > p { margin: 0; color: var(--lp-muted); font-size: 11px; }
 
 .lp-options .lp-section-head { margin-bottom: 54px; }
 .lp-option-row { display: grid; grid-template-columns: minmax(280px, 1.35fr) minmax(190px, .7fr) minmax(250px, 1fr) auto; gap: 28px; align-items: center; padding: 28px 0; border-top: 1px solid var(--lp-ink); }
 .lp-option-row:last-of-type { border-bottom: 1px solid var(--lp-ink); }
-.lp-option-row > div > span { color: #587900; font-family: "IBM Plex Mono", monospace; font-size: 10px; }
+.lp-option-row > div > span { color: #506d00; font-family: "IBM Plex Mono", monospace; font-size: 10px; }
 .lp-option-row h3 { margin: 7px 0 4px; font-size: 16px; }
 .lp-option-row p { margin: 0; color: var(--lp-muted); font-size: 11px; }
 .lp-option-price strong { display: block; color: var(--lp-ink); font-family: "Space Grotesk", sans-serif; font-size: 28px; line-height: 1.2; }
@@ -324,7 +324,7 @@
 
 .lp-footer { display: flex; justify-content: space-between; gap: 24px; max-width: 1240px; margin: 0 auto; padding: 0 32px 42px; color: var(--lp-muted); font-size: 10px; }
 .lp-footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
-.lp-footer nav a { color: inherit; }
+.lp-footer nav a { display: inline-block; color: inherit; }
 .lp-footer nav a:hover { color: var(--lp-ink); text-decoration: underline; }
 .lp-mobile-cta { display: none; }
 
@@ -467,7 +467,7 @@
 .lp-thanks p { font-size: 15px; }
 .lp-thanks .lp-receipt { padding: 16px; border: 1px solid var(--lp-line); overflow-wrap: anywhere; }
 .lp-thanks .lp-button { margin-top: 28px; }
-.shonan-lp input:focus-visible, .shonan-lp textarea:focus-visible, .shonan-lp button:focus-visible { outline: 3px solid var(--lp-acid); outline-offset: 4px; }
+.shonan-lp input:focus-visible, .shonan-lp textarea:focus-visible, .shonan-lp select:focus-visible, .shonan-lp button:focus-visible { outline: 3px solid var(--lp-acid); outline-offset: 4px; }
 @media (max-width:980px) { .lp-inquiry-form, .lp-inline-success { margin-left: 0; } }
 @media (max-width:720px) {
   .lp-form-grid { grid-template-columns: minmax(0,1fr); gap: 22px; }

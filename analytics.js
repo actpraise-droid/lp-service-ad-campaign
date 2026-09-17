@@ -30,13 +30,8 @@
     if (typeof window.gtag !== "function") return;
     window.gtag("event", name, parameters);
 
-    // GA4で既にキーイベントに設定済みの推奨イベントにも接続する。
-    if (name === "contact_form_open" || name === "email_click" || name === "line_click" || name === "mitsumori_local_register") {
-      window.gtag("event", "qualify_lead", {
-        ...parameters,
-        lead_source: name,
-      });
-    }
+    // A contact click is not a qualified lead. Keep these descriptive click
+    // events; qualification is recorded after reviewing the inquiry in the ledger.
 
     if (name === "reform_diagnosis_form_open") {
       window.gtag("event", "form_start", {

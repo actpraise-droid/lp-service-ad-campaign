@@ -15,6 +15,15 @@
   let formStarted = false;
   const frames = new Map();
   const pendingKey = 'dosen_pending_lead_v1';
+  const minimumStartAge = 1500;
+  const refreshStartAfter = 86400000 - 60000;
+  const refreshStartWindow = () => {
+    const now = Date.now();
+    // Keep a minute of margin before the receiver's 24-hour limit. Only the
+    // anti-spam clock changes; a pending receipt id and attribution stay intact.
+    if (now < startedAt || now - startedAt >= refreshStartAfter) startedAt = now;
+    return Math.max(0, minimumStartAge - (now - startedAt));
+  };
   const hash = async text => {
     if (!crypto.subtle) return null;
     const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
@@ -60,6 +69,9 @@
     keys.forEach(key => { values[key] = form.elements[key].value.trim(); });
     if (!values.company || !values.purpose) { show('会社・店舗名とご相談内容をご入力ください。', true); return; }
     setBusy(true);
+    // Once the user retries, its persisted id will recover any saved receipt.
+    // Retire the previous response before an asynchronous preparation wait.
+    clearTimeout(timer); cleanFrames();
     let fingerprint;
     try { fingerprint = await hash(JSON.stringify(values)); } catch (_) { fingerprint = null; }
     if (!fingerprint) {
@@ -75,6 +87,13 @@
     // returns the saved receipt instead of creating another lead.
     if (!active || active.fingerprint !== fingerprint) active = { id: uuid(), fingerprint, createdAt: Date.now(), attribution: window.DosenAttribution ? window.DosenAttribution.get() : { firstTouch: null, lastTouch: null }, succeeded: false };
     try { sessionStorage.setItem(pendingKey, JSON.stringify(active)); } catch (_) {}
+    let wait = refreshStartWindow();
+    while (wait > 0) {
+      show('送信の準備をしています。入力内容はそのままです。');
+      await new Promise(resolve => window.setTimeout(resolve, wait));
+      // A suspended tab may resume days later; recheck before constructing POST.
+      wait = refreshStartWindow();
+    }
     const id = active.id;
     const payload = {
       ...values, request_id: id, privacy_consent: 'yes',
@@ -85,7 +104,6 @@
     // Only internal test contexts may supply a QA token. It is never part of
     // public configuration, URLs, analytics or persisted browser storage.
     if (form.elements.test_token && location.hostname === '127.0.0.1') payload.test_token = form.elements.test_token.value;
-    cleanFrames();
     const iframe = document.createElement('iframe');
     iframe.name = 'dosen-receiver-' + uuid(); iframe.hidden = true;
     iframe.title = '問い合わせの送信結果'; iframe.setAttribute('aria-hidden', 'true');
@@ -135,5 +153,9 @@
       form.reset(); completed = false; active = null; startedAt = Date.now();
       setBusy(false); status.hidden = true; cleanFrames();
     }
+    if (!busy && !completed) refreshStartWindow();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && !busy && !completed) refreshStartWindow();
   });
 })();
