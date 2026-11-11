@@ -476,3 +476,15 @@
   .lp-form-note { font-size: 11px; }
   .lp-thanks { padding-top: 50px; padding-bottom: 60px; }
 }
+
+/* 2026-11-11 業種別LP制作・ガイドへの内部リンク */
+.lp-industry .lp-section-head { margin-bottom: 44px; }
+.lp-industry-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
+.lp-industry-list li { padding: 22px 0 24px; border-top: 1px solid var(--lp-ink); }
+.lp-industry-list h3 { margin: 0 0 4px; font-size: 16px; }
+.lp-industry-list p { margin: 0 0 12px; color: var(--lp-muted); font-size: 12px; }
+.lp-industry-list a { margin-right: 18px; }
+.lp-industry-more { margin: 26px 0 0; color: var(--lp-muted); font-size: 12px; line-height: 2.2; }
+.lp-industry-more a { display: inline-block; margin-right: 14px; color: var(--lp-ink); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .lp-industry-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .lp-industry-list { grid-template-columns: 1fr; } }

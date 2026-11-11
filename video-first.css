@@ -59,3 +59,5 @@
 .contact-options .email-address{font-size:12px!important;color:#e1eadd!important;margin:2px 0!important}
 .email-address span{font-family:Arial,sans-serif;font-size:14px;overflow-wrap:anywhere}
 .contact-form-entry{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid #70857c}.contact-form-entry h3{font-size:20px;line-height:1.6;margin-bottom:12px}.contact-form-entry .button{margin:14px 0 10px;max-width:100%;white-space:normal}.contact-form-entry .fine-print{font-size:12px;line-height:1.8}
+/* 2026-11-11 業種別LP制作への内部リンク */
+.lp-industry-links{display:flex;flex-wrap:wrap;gap:2px 18px;align-items:baseline;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:12px}.lp-industry-label{width:100%;font-size:11px;font-weight:700;letter-spacing:.04em}.lp-industry-links a{display:inline-block;padding:7px 0;text-decoration:underline;text-underline-offset:3px}.lp-industry-links a:hover{color:#58713f}

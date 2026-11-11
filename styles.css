@@ -3364,3 +3364,6 @@ html.js .contact-section .lit .mark {
     margin: 24px 0 0;
   }
 }
+
+/* 2026-11-11 ガイドの小見出し */
+.guide-section h3 { margin: 26px 0 8px; font-size: 1.05rem; line-height: 1.6; }
