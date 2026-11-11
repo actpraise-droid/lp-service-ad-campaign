@@ -488,3 +488,25 @@
 .lp-industry-more a { display: inline-block; margin-right: 14px; color: var(--lp-ink); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 900px) { .lp-industry-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .lp-industry-list { grid-template-columns: 1fr; } }
+
+/* 2026-11-11b ファーストビューの料金行・比較検討中の方へ・送信前の安心材料 */
+.lp-hero-facts { margin: 14px 0 0; color: var(--lp-ink); font-size: 12px; font-weight: 700; line-height: 1.8; }
+.lp-hero-facts span { white-space: nowrap; }
+.lp-industry-more + .lp-industry-more { margin-top: 2px; }
+.lp-compare .lp-section-head { margin-bottom: 48px; }
+.lp-compare-list { margin: 0; border-top: 2px solid var(--lp-ink); }
+.lp-compare-list > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--lp-line); }
+.lp-compare-list dt { font-size: 15px; font-weight: 700; }
+.lp-compare-list dd { min-width: 0; margin: 0; color: var(--lp-muted); font-size: 13px; overflow-wrap: anywhere; }
+.lp-compare-list dd strong { color: var(--lp-ink); }
+.lp-compare-list dd a { color: var(--lp-ink); text-decoration: underline; text-underline-offset: 3px; }
+.lp-compare-sites { display: block; margin-top: 8px; }
+.lp-compare .lp-fine { margin: 20px 0 0; }
+.lp-form-assure { margin: 18px 0 0; padding: 12px 14px; border-left: 4px solid var(--lp-acid); background: rgba(255, 255, 255, .08); color: #fff; font-size: 13px; font-weight: 700; line-height: 1.8; }
+@media (max-width: 720px) {
+  .lp-compare .lp-section-head { margin-bottom: 34px; }
+  .lp-compare-list > div { display: block; padding: 18px 0; }
+  .lp-compare-list dt { margin-bottom: 6px; font-size: 14px; }
+  .lp-compare-list dd { font-size: 12px; }
+  .lp-form-assure { font-size: 12px; }
+}

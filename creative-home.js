@@ -32,7 +32,7 @@
     summary.textContent = '気になった見本：' + cases[key].title + '「' + cases[key].subtitle + '」';
     summary.hidden = false;
     const subject = '広告動画・画像制作の相談｜' + cases[key].title + 'の見本について';
-    document.getElementById('email-contact').href = 'mailto:actpraise@gmail.com?subject=' + encodeURIComponent(subject);
+    document.getElementById('email-contact').href = 'mailto:m.komatsu@dosen-lab.co.jp?subject=' + encodeURIComponent(subject);
   }
   function openMedia(key, kind, trigger) {
     if (!cases[key]) return;

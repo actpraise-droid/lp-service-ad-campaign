@@ -29,7 +29,7 @@
   }
   function updateContact(){
     const subject=services[service]+'の相談'+(industries[industryField.value]?'｜'+industries[industryField.value]:'')+(selected&&service!=='lp'?'｜'+cases[selected].title+'の見本について':'');
-    document.getElementById('email-contact').href='mailto:actpraise@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(inquiryText());
+    document.getElementById('email-contact').href='mailto:m.komatsu@dosen-lab.co.jp?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(inquiryText());
     document.getElementById('contact-selection').textContent='ご相談内容：'+services[service];
     document.querySelectorAll('[data-service-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.serviceChoice===service)));
     const summary=document.getElementById('selected-sample');

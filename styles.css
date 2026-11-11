@@ -3367,3 +3367,85 @@ html.js .contact-section .lit .mark {
 
 /* 2026-11-11 ガイドの小見出し */
 .guide-section h3 { margin: 26px 0 8px; font-size: 1.05rem; line-height: 1.6; }
+
+/* 2026-11-11b 地域ページ（鎌倉・湘南）と地域案内の行。本文中のリンクに下線を付ける */
+.guide-area-note { max-width: 68ch; margin: 0; font-size: 15.5px; line-height: 1.9; color: var(--muted-p); }
+.guide-area-note a { color: var(--ink-p); }
+.guide-area-note a,
+.guide-region .guide-section a,
+.guide-region .guide-lead a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+
+/* 2026-11-12 LP制作の基礎ガイド（guides/lp-*.html）。本文中のリンクに下線を付け、ページ内リンクの着地位置を固定ヘッダーの分だけ下げる */
+.guide-basics .guide-section a,
+.guide-basics .guide-lead a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.guide-basics [id] { scroll-margin-top: 40px; }
+
+/* 2026-11-12 LP公開前チェックリスト（guides/lp-prelaunch-checklist.html）。
+   サイト全体は color-scheme: dark なので、チェックボックスが暗色で描かれないよう、この枠の中だけ light に戻す */
+.lp-check { color-scheme: light; margin: 24px 0 0; border: 1px solid var(--line-p); background: var(--paper-card); }
+.lp-check [hidden] { display: none !important; }
+.lp-check-status { padding: 16px 20px; border-bottom: 1px solid var(--line-p); background: var(--paper); }
+.guide-section .lp-check-count { max-width: none; margin: 0; font-size: 15px; color: var(--ink-p); }
+.lp-check-count strong { font-family: var(--grot); font-size: 1.5em; }
+.lp-check-bar { height: 8px; margin-top: 10px; background: var(--line-p); }
+.lp-check-bar span { display: block; width: 0; height: 100%; background: var(--ink-p); transition: width 0.2s var(--snap); }
+.guide-section .lp-check-message { max-width: none; margin: 10px 0 0; font-size: 14px; font-weight: 700; color: var(--ink-p); }
+.lp-check-message:empty { display: none; }
+.lp-check-group { padding-bottom: 8px; border-bottom: 1px solid var(--line-p); }
+.lp-check .lp-check-group h3 { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; margin: 0; padding: 18px 20px 6px; font-size: 1.05rem; line-height: 1.6; }
+.lp-check-groupcount { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--muted-p); }
+.guide-section .lp-check-list { max-width: none; margin: 0; padding: 0; list-style: none; font-size: 15.5px; line-height: 1.7; color: var(--ink-p); }
+.guide-section .lp-check-list li + li { margin-top: 0; }
+.lp-check-item { display: flex; align-items: flex-start; gap: 14px; min-height: 52px; padding: 13px 20px; cursor: pointer; }
+.lp-check-item:hover { background: var(--paper); }
+.lp-check-item input { flex: none; width: 24px; height: 24px; margin: 1px 0 0; accent-color: var(--ink-p); cursor: pointer; }
+.lp-check-item:has(input:focus-visible) { outline: 3px solid var(--ink-p); outline-offset: -3px; }
+.lp-check-item:has(input:checked) { color: var(--muted-p); }
+.lp-check-actions { display: flex; flex-wrap: wrap; gap: 12px; padding: 18px 20px 6px; }
+.lp-check-button { min-height: 48px; padding: 0 22px; border: 1px solid var(--ink-p); border-radius: 0; background: var(--paper-card); color: var(--ink-p); font-family: var(--disp); font-size: 14.5px; font-weight: 700; letter-spacing: 0.04em; cursor: pointer; }
+.lp-check-button:hover { background: var(--ink-p); color: var(--paper-card); }
+.lp-check-button:focus-visible { outline: 3px solid var(--ink-p); outline-offset: 3px; }
+.guide-section .lp-check-note { max-width: none; margin: 0; padding: 12px 20px 18px; font-size: 13.5px; line-height: 1.8; color: var(--muted-p); }
+.lp-check-printsrc { display: none; }
+
+@media (max-width: 640px) {
+  .lp-check-status,
+  .lp-check-item { padding-left: 14px; padding-right: 14px; }
+  .lp-check .lp-check-group h3 { padding-left: 14px; padding-right: 14px; }
+  .lp-check-actions { padding-left: 14px; padding-right: 14px; }
+  .lp-check-button { flex: 1 1 140px; }
+  .guide-section .lp-check-note { padding-left: 14px; padding-right: 14px; }
+}
+
+/* 印刷はチェック表だけを出す（ヘッダー・説明文・相談ボタンは出さない） */
+@media print {
+  .lp-check-page { background: #fff none; color: #000; }
+  .lp-check-page .skip-link,
+  .lp-check-page .site-header,
+  .lp-check-page .mobile-quick-nav,
+  .lp-check-page .mobile-consult-fixed,
+  .lp-check-page .site-footer,
+  .lp-check-page .guide-eyebrow,
+  .lp-check-page .guide-byline,
+  .lp-check-page .guide-lead,
+  .lp-check-page .guide-section:not(#checklist),
+  .lp-check-page #checklist .guide-answer,
+  .lp-check-page .guide-cta,
+  .lp-check-page .guide-related,
+  .lp-check-page .guide-author,
+  .lp-check-page .lp-check-bar,
+  .lp-check-page .lp-check-message,
+  .lp-check-page .lp-check-actions,
+  .lp-check-page .lp-check-note { display: none !important; }
+  .lp-check-page .guide-main { max-width: none; padding: 0; }
+  .lp-check-page .guide-article h1 { margin: 0 0 8pt; font-size: 18pt; }
+  .lp-check-page .guide-section { margin: 0; padding: 0; border: 0; }
+  .lp-check-page .guide-section h2 { margin: 0 0 6pt; font-size: 13pt; }
+  .lp-check-page .lp-check { margin: 0; border: 0; }
+  .lp-check-page .lp-check-status { padding: 0 0 6pt; border: 0; background: none; }
+  .lp-check-page .lp-check-group { padding-bottom: 4pt; break-inside: avoid; page-break-inside: avoid; }
+  .lp-check-page .lp-check .lp-check-group h3 { padding: 8pt 0 2pt; font-size: 11pt; }
+  .lp-check-page .lp-check-item { min-height: 0; padding: 3pt 0; gap: 8pt; font-size: 10pt; color: #000; }
+  .lp-check-page .lp-check-item input { width: 12pt; height: 12pt; }
+  .lp-check-page .lp-check-printsrc { display: block; max-width: none; margin: 10pt 0 0; font-size: 8.5pt; color: #000; }
+}
