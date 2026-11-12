@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dosen-lab.co.jp/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/services/lp-production.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -42,8 +42,18 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/services/recruiting-lp.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/services/recruiting-video-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/services/recruiting-sns.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/services/seminar-lp.html</loc>
@@ -52,7 +62,7 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/services/video-manga-lp.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -92,12 +102,12 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/reform-ad-no-response.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/exterior-painting-inquiries.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -107,37 +117,37 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/index.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/recruiting.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/btob.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/local.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/seminar.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/realestate.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/school.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -157,7 +167,7 @@
   </url>
   <url>
     <loc>https://dosen-lab.co.jp/guides/lp-structure-template.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -168,6 +178,46 @@
   <url>
     <loc>https://dosen-lab.co.jp/guides/lp-prelaunch-checklist.html</loc>
     <lastmod>2026-11-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/reform-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/lp-samples.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/construction-recruiting-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/care-recruiting-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/manufacturing-recruiting-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/driver-recruiting-lp.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/recruiting-video.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dosen-lab.co.jp/guides/no-applicants.html</loc>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

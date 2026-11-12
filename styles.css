@@ -3449,3 +3449,17 @@ html.js .contact-section .lit .mark {
   .lp-check-page .lp-check-item input { width: 12pt; height: 12pt; }
   .lp-check-page .lp-check-printsrc { display: block; max-width: none; margin: 10pt 0 0; font-size: 8.5pt; color: #000; }
 }
+
+/* 2026-11-13 構成の見本図（ガイド内）。LPのブロックを上から順に並べて見せる。文言は例。 */
+.guide-wire { margin: 24px 0; border: 1px solid var(--line-p); background: var(--paper-card); }
+.guide-wire .guide-wire-list { list-style: none; max-width: none; margin: 0; padding: 0; counter-reset: wire; }
+.guide-wire .guide-wire-list > li { counter-increment: wire; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 2px 14px; margin: 0; padding: 14px 18px; border-bottom: 1px dashed var(--line-p); }
+.guide-wire .guide-wire-list > li::before { content: counter(wire); grid-row: 1 / span 2; align-self: start; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--ink-p); background: var(--paper); font-family: var(--mono); font-size: 13px; line-height: 1; color: var(--ink-p); }
+.guide-wire .guide-wire-list > li > strong { grid-column: 2; font-size: 15px; line-height: 1.6; color: var(--ink-p); }
+.guide-wire .guide-wire-list > li > span { grid-column: 2; font-size: 14px; line-height: 1.8; color: var(--muted-p); overflow-wrap: anywhere; }
+.guide-wire .guide-wire-list > li.is-cta { background: var(--paper); }
+.guide-wire .guide-wire-list > li.is-cta > strong::after { content: "ボタン"; display: inline-block; margin-left: 8px; padding: 2px 8px; font-family: var(--mono); font-size: 11px; font-weight: 400; line-height: 1.4; vertical-align: 2px; background: var(--ink-p); color: var(--accent); }
+.guide-wire figcaption { padding: 12px 18px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em; color: var(--muted-p); }
+@media (max-width: 520px) {
+  .guide-wire .guide-wire-list > li { padding: 12px 14px; gap: 2px 12px; }
+}
