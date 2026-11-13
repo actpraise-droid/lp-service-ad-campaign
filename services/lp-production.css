@@ -233,6 +233,7 @@
 .lp-case-featured { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, .65fr); gap: 54px; align-items: center; }
 .lp-case-featured .lp-case-image { padding: 10px; background: var(--lp-ink); border: 0; }
 .lp-case-featured .lp-case-image img { aspect-ratio: 1.55; }
+.lp-case-featured + .lp-case-featured { margin-top: 80px; }
 .lp-case-copy { padding-right: 10px; }
 .lp-case-no { margin-bottom: 38px; color: #506d00; }
 .lp-case-type { color: var(--lp-muted); }
